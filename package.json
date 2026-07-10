@@ -1,0 +1,19 @@
+{
+  "name": "nintendogs",
+  "version": "0.1.0",
+  "description": "NINTENDOGS — A Horror Visual Novel Clicker (Game Jam 2026)",
+  "scripts": {
+    "start": "npx serve . -l 8080 --no-clipboard",
+    "dev": "npx serve . -l 8080 --no-clipboard"
+  },
+  "keywords": [
+    "game",
+    "phaser",
+    "horror",
+    "visual-novel"
+  ],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "serve": "^14.2.6"
+  }
+}
