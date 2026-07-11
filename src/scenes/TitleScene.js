@@ -17,6 +17,30 @@ export class TitleScene extends Phaser.Scene {
     // Reset state for every new run
     GameState.reset();
 
+    if (this.registry.get('currentBgmKey') !== 'bgm_afternoon') {
+      const currentBgm = this.registry.get('currentBgmAudio');
+      
+      const newBgm = this.sound.add('bgm_afternoon', { loop: true, volume: 0 });
+      newBgm.play();
+      
+      this.registry.set('currentBgmKey', 'bgm_afternoon');
+      this.registry.set('currentBgmAudio', newBgm);
+
+      if (currentBgm) {
+        this.tweens.add({
+          targets: currentBgm,
+          volume: 0,
+          duration: 1500,
+          onComplete: () => { currentBgm.stop(); currentBgm.destroy(); }
+        });
+      }
+      this.tweens.add({
+        targets: newBgm,
+        volume: 0.5,
+        duration: 1500
+      });
+    }
+
     // Background
     this.add.image(W / 2, H / 2, 'bg_lab').setDisplaySize(W, H);
 

@@ -14,7 +14,9 @@
 export const dismissThoughtsConfig = {
   id: 'dismissThoughts',
   type: 'DISMISS_THOUGHTS',
+  bgm: 'bgm_regret_minigame',
   label: 'Dismiss the Thoughts',
+  background: 'bg_outside',
   location: 'Quadrangle',
 
   // ── Core mechanics (per NINTENDOGS.md spec) ───────────────────────────────

@@ -48,8 +48,16 @@ export class HubScene extends Phaser.Scene {
   create() {
     const { width: W, height: H } = this.scale;
 
-    // Background (Placeholder for map later)
-    this.add.image(W / 2, H / 2, 'bg_hub').setDisplaySize(W, H);
+    // Background
+    const outImg = this.add.image(W / 2, H / 2, 'bg_outside');
+    const outScale = Math.max(W / outImg.width, H / outImg.height);
+    outImg.setScale(outScale);
+
+    // Map overlay
+    const mapImg = this.add.image(W / 2, H / 2, 'bg_MAP');
+    const mapScale = Math.min(W / mapImg.width, H / mapImg.height);
+    mapImg.setScale(mapScale);
+
     this.add.rectangle(W / 2, H / 2, W, H, 0x000000, 0.4);
 
     // ── Dialogue UI (matching DialogueScene) ──────────────────────────────

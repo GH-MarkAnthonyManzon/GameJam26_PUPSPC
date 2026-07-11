@@ -35,8 +35,39 @@ export class MiniGameScene extends Phaser.Scene {
   create() {
     const { width: W, height: H } = this.scale;
 
+    if (this.config.bgm && this.registry.get('currentBgmKey') !== this.config.bgm) {
+      const currentBgm = this.registry.get('currentBgmAudio');
+      
+      const newBgm = this.sound.add(this.config.bgm, { loop: true, volume: 0 });
+      newBgm.play();
+      
+      this.registry.set('currentBgmKey', this.config.bgm);
+      this.registry.set('currentBgmAudio', newBgm);
+
+      if (currentBgm) {
+        this.tweens.add({
+          targets: currentBgm,
+          volume: 0,
+          duration: 1500,
+          onComplete: () => { currentBgm.stop(); currentBgm.destroy(); }
+        });
+      }
+      this.tweens.add({
+        targets: newBgm,
+        volume: 0.5,
+        duration: 1500
+      });
+    }
+
     // Dark overlay background for all mini-games
-    this.add.rectangle(W / 2, H / 2, W, H, 0x050510, 1);
+    if (this.config.background) {
+      const bgImg = this.add.image(W / 2, H / 2, this.config.background);
+      const bgScale = Math.max(W / bgImg.width, H / bgImg.height);
+      bgImg.setScale(bgScale);
+      this.add.rectangle(W / 2, H / 2, W, H, 0x050510, 0.35);
+    } else {
+      this.add.rectangle(W / 2, H / 2, W, H, 0x050510, 1);
+    }
 
     // Mini-game label (top-left, subtle)
     this.add.text(16, 12, `[ ${this.config.label.toUpperCase()} ]`, {

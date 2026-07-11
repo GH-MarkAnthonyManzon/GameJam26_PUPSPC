@@ -27,6 +27,11 @@ const config = {
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
 
+  // High-fidelity rendering configuration
+  resolution: 2,
+  antialias: true,
+  antialiasGL: true,
+
   // Scene order = load order; BootScene runs first
   scene: [
     BootScene,

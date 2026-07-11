@@ -53,6 +53,31 @@ export class ChaseScene extends Phaser.Scene {
     this.progress = this.resumeProgress || 0;
     this.checkpointIndex = this.resumeCheckpoint || 0;
     this.chaseActive = true;
+
+    // Start global BGM
+    if (this.registry.get('currentBgmKey') !== 'bgm_chase') {
+      const old = this.registry.get('currentBgmAudio');
+      
+      const newBgm = this.sound.add('bgm_chase', { loop: true, volume: 0 });
+      newBgm.play();
+      
+      this.registry.set('currentBgmKey', 'bgm_chase');
+      this.registry.set('currentBgmAudio', newBgm);
+
+      if (old) {
+        this.tweens.add({
+          targets: old,
+          volume: 0,
+          duration: 1500,
+          onComplete: () => { old.stop(); old.destroy(); }
+        });
+      }
+      this.tweens.add({
+        targets: newBgm,
+        volume: 0.5,
+        duration: 1500
+      });
+    }
     this.inCheckpoint = false;
     this.cameraXOffset = 0;
     this.currentLane = 0; // -1: Left, 0: Center, 1: Right

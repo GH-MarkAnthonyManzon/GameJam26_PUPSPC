@@ -14,6 +14,7 @@
 export const invitationCardsConfig = {
   id: 'invitationCards',
   type: 'INVITATION_CARDS',
+  bgm: 'bgm_burnout_dialogue',
   label: 'Invitation Cards',
   location: 'Court',
 

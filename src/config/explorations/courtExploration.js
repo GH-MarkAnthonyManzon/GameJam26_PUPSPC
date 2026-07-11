@@ -20,6 +20,9 @@ export const courtExploration = {
           x: 150, y: 310, w: 80, h: 80,
           color: 0xe17055,
           label: 'Basketball',
+          texture: 'clue_BPI',
+          frameRect: { x: 0, y: 300, w: 1000, h: 1400 },
+          visual: { scale: 0.12, offsetY: -30 },
           dialogueData: [
             { speaker: 'Protagonist', text: 'I used to play.' },
             { speaker: 'Protagonist', text: 'I was good at it, I think.' },
@@ -30,6 +33,9 @@ export const courtExploration = {
           x: 400, y: 275, w: 100, h: 100,
           color: 0x6c5ce7,
           label: 'Club Posters',
+          texture: 'clue_BPI',
+          frameRect: { x: 1200, y: 300, w: 1000, h: 1400 },
+          visual: { scale: 0.12, offsetY: -30 },
           dialogueData: [
             { speaker: 'Protagonist', text: 'Photography Club.' },
             { speaker: 'Protagonist', text: 'I almost joined.' },
@@ -40,6 +46,9 @@ export const courtExploration = {
           x: 625, y: 295, w: 110, h: 90,
           color: 0x00b894,
           label: 'Music Equipment',
+          texture: 'clue_BPI',
+          frameRect: { x: 2400, y: 300, w: 1000, h: 1400 },
+          visual: { scale: 0.12, offsetY: -30 },
           dialogueData: [
             { speaker: 'Protagonist', text: 'I had a keyboard at home.' },
             { speaker: 'Protagonist', text: 'I sold it for textbooks.' },
@@ -65,6 +74,9 @@ export const courtExploration = {
           x: 175, y: 300, w: 100, h: 80,
           color: 0xfdcb6e,
           label: 'Old Photos',
+          texture: 'clue_PCS',
+          frameRect: { x: 0, y: 300, w: 1000, h: 1400 },
+          visual: { scale: 0.12, offsetY: -30 },
           dialogueData: [
             { speaker: 'Protagonist', text: "Everyone's smiling." },
             { speaker: 'Protagonist', text: 'When was this?' },
@@ -75,6 +87,9 @@ export const courtExploration = {
           x: 415, y: 285, w: 110, h: 90,
           color: 0xffeaa7,
           label: 'Certificates',
+          texture: 'clue_PCS',
+          frameRect: { x: 1200, y: 300, w: 1000, h: 1400 },
+          visual: { scale: 0.12, offsetY: -30 },
           dialogueData: [
             { speaker: 'Protagonist', text: 'Perfect attendance.' },
             { speaker: 'Protagonist', text: "I was there, but I wasn't." },
@@ -85,6 +100,9 @@ export const courtExploration = {
           x: 625, y: 295, w: 90, h: 105,
           color: 0xb2bec3,
           label: 'Old Sketchbook',
+          texture: 'clue_PCS',
+          frameRect: { x: 2400, y: 300, w: 1000, h: 1400 },
+          visual: { scale: 0.12, offsetY: -30 },
           dialogueData: [
             { speaker: 'Protagonist', text: 'Mine.' },
             { speaker: 'Protagonist', text: "I didn't know I left this here." },

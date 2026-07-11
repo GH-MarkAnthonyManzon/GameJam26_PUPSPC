@@ -15,5 +15,8 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "serve": "^14.2.6"
+  },
+  "dependencies": {
+    "jimp": "^1.6.1"
   }
 }

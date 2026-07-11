@@ -12,8 +12,10 @@
  */
 
 export const hallwayOfDoorsConfig = {
+  background: 'bg_library',
   id: 'hallwayOfDoors',
   type: 'HALLWAY_OF_DOORS',
+  bgm: 'bgm_regret_dialogue',
   label: 'Hallway of Doors',
   location: 'New Building',
 

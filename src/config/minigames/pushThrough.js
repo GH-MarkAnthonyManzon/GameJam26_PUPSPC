@@ -14,7 +14,9 @@
 export const pushThroughConfig = {
   id: 'pushThrough',
   type: 'PUSH_THROUGH',
+  bgm: 'bgm_burnout_minigame',
   label: 'Push Through',
+  background: 'bg_outside',
   location: 'Quadrangle',
 
   // ── Core mechanics (PDF exact values) ────────────────────────────────────

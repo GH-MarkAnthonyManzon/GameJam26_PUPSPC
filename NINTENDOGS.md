@@ -1,3 +1,944 @@
+# **Story Overview**
+
+**Prologue**
+
+(During a dream)
+
+The protagonist is an ordinary college student who falls asleep during class inside the Computer Laboratory.
+
+When she wakes up, it's midnight.
+
+The campus looks completely normal, but there is no one around. Confused, she begins exploring the school, unaware that she is trapped inside a dream that gradually turns into a nightmare.
+
+As she explores different areas of the campus, she encounters mysterious entities. Rather than attacking immediately, they speak to her and force her to relive painful memories, each representing a trauma she has experienced throughout her college life.
+
+**(3) Locations on where the “gameplay” would play out:**
+
+1. Quadrangle  
+2. New Building  
+3. Court
+
+## **QUADRANGLE ROUTE**
+
+### **Featured Entities**
+
+* Burnout (A)  
+* Regret (B)
+
+### **Story Flow:**
+
+**Exploration**
+
+* The quadrangle feels peaceful at first.  
+* Benches, trees, empty pathways.  
+* The player investigates the area.  
+  ***–Entity A Appears–***  
+* Burnout silently watches from a distance.  
+* It doesn't attack.  
+* It occasionally speaks about exhaustion and overworking.  
+  *"You're tired... aren't you?"*  
+  The protagonist brushes it off.  
+  **Investigation**  
+* The player discovers objects connected to late-night studying, unfinished work, and academic pressure.  
+* Burnout's dialogue becomes more personal.  
+  **\*“Mini Task” Minigame Section Occurs\***  
+  **CLIMAX:**
+
+  ***\--Entity B Appears–***  
+* Regret finally reveals itself.  
+* It reminds the protagonist of mistakes she wishes she could undo.
+
+  *"If only you tried harder."*
+
+  Burnout and Regret begin speaking over each other.
+
+  The nightmare becomes unstable.
+
+  **Final Chase:**
+
+  ***–Final Boss Appears–***
+
+  **CHASE GAMEPLAY (switch to 3d) OCCURS**
+
+* Leads to either**: Good** or **Bad** Ending based on performance in the mini tasks
+
+## **NEW BUILDING ROUTE** 
+
+### **Featured Entities**
+
+* Regret (B)  
+* Lost (C)
+
+### **Story Flow:**
+
+**Exploration**
+
+* Empty classrooms.  
+* Endless hallways.  
+* Flickering lights.  
+  ***–Entity B Appears–***  
+  \*Regret begins making the protagonist remember decisions she wishes she could change.\*  
+  **Investigation**  
+* The player finds old papers, abandoned classrooms, graduation posters.
+
+\*The protagonist begins questioning her future.\*
+
+**\*“Mini Task” Minigame Section Occurs\***
+
+**CLIMAX:**
+
+***–Entity C Appears–***
+
+\*Lost enters.\*
+
+Instead of talking about the past...
+
+It questions the future.
+
+*"What happens after graduation?"*
+
+*"Do you even know who you are?"*
+
+\*The protagonist starts doubting herself.\*
+
+**Final Chase:**
+
+***–Final Boss Appears–***
+
+**CHASE GAMEPLAY (switch to 3d) OCCURS**
+
+* Leads to either: **Good** or **Bad Ending** Ending based on performance in the mini tasks 
+
+## **COURT ROUTE**  
+
+### **Featured Entities**
+
+* Lost (C)  
+* Deprivation (D)
+
+### **Story Flow:**
+
+**Exploration**
+
+* The empty court echoes every footstep.  
+* The atmosphere feels much heavier.  
+  ***–Entity C Appears–***  
+  \*Lost constantly questions the protagonist's purpose.\*  
+  **Investigation**  
+* The player finds memories of friendships, clubs, and moments that disappeared because of academics.   
+  **\*“Mini Task” Minigame Section Occurs\***
+
+**CLIMAX:**
+
+***–Entity D Appears–***
+
+Deprivation begins confronting the protagonist.
+
+*"Remember when you stopped doing what you loved?"*
+
+*"Remember who you left behind?"*
+
+Unlike the previous entities, Deprivation doesn't sound angry.
+
+It sounds disappointed.
+
+**Final Chase:**
+
+***–Final Boss Appears–***
+
+**CHASE GAMEPLAY (switch to 3d) OCCURS**
+
+* Leads to either: **Good** or **Bad Ending** Ending based on performance in the mini tasks
+
+
+
+
+**5 Entities \[TRAUMAS\]** :
+
+* Burnout **A** \- melting body, asymmetrical body, over exaggerated sleepy eyes  
+* Regret **B** \-   
+* Lost **C**  
+* Deprivation **D**  
+* Despair \[FINAL BOSS ENTITY\]
+
+**Student:** The entities represent her past/recent trauma \[5 kinds\] 
+
+Mini Task: (These tasks must be completed)
+
+**Quadrangle:**  
+	**\[A\]**: Fading Energy Bar appears on screen, student must click **"Push Through"** to keep it from hitting 0, for **20 seconds**
+
+* Click **"Push Through"** to restore the bar, each click adds a small amount back  
+* Bar drains continuously on its own during the 20 seconds  
+* If Bar hits 0 before the 20 seconds end: entity aggressively dialogues the student's burnout, then proceeds to the next entity (no retry, outcome only affects Aura earned)   
+* If bar survives the full 20 seconds: task complete, entity appears with calmer dialogue, then proceeds to the next entity 
+
+	**\[B\]:** Thought bubbles appear and cover most of the screen for 20 seconds, overwhelming the student, she must click each bubble to reject/dismiss it
+
+* Bubbles spawn at a rate of 3 bubbles per 1.5 seconds (fast, continuous wave for the full 20 seconds)  
+* One click \= one bubble dismissed  
+* If bubbles aren't clicked in time, they stack up on screen instead of disappearing  
+* If 5 bubbles accumulate unclicked (pile up because she couldn't keep pace): entity manifests aggressively, then proceeds to the next stage (no retry, outcome only affects Aura earned)   
+* If she keeps pace and prevents pile-up through the full 20 seconds: task complete, entity appears with calmer dialogue, then proceeds to the next entity 
+
+**New Building:**  
+	**\[B \- C\]**: Hallway of Doors game, **8 doors** appear in sequence, no hint whether each door holds a Regret, Lost, or Spark memory, student clicks through them like surfing memories
+
+* Click the door within **3-4 seconds** before it vanishes  
+* Certainty Bar shifts up or down depending on door type and click timing  
+* If clicking too fast (avoiding the thought before it registers): deducts points from the Certainty Bar, which can eventually drop it to 0  
+* If Certainty Bar hits 0: entity manifests aggressively, then proceeds to the next stage (no retry, outcome only affects Aura earned)   
+* If Certainty Bar reaches the goal by door 8: task complete, entity appears with calmer dialogue, then proceeds to the next entity 
+
+**Court:**  
+**\[C-D\]**: Invitation cards appear one at a time on screen (org events, exam reviewer, group meetup, part-time shift, rest), student has an Energy Bar that drains per click
+
+* Click **"Engage"** to interact with the invitation, costs energy (bar drops), but fills the **Belonging Meter**  
+* Click **"Skip"** to pass on it, costs no energy, but fills the **Toll Meter** instead  
+* Each invitation only appears for **3 seconds** before it disappears (auto-counts as Skip if not clicked in time)  
+* **8 invitations** total appear in sequence  
+* If Energy Bar hits 0 before all 8 are shown (overspent trying to engage with too many): entity manifests aggressively, then proceeds to the next stage (no retry, outcome only affects Aura earned)   
+* If Toll Meter maxes out (skipped almost everything): entity manifests with quieter/resigned dialogue, then proceeds to the next stage (no retry, outcome only affects Aura earned)   
+* If both bars land mid-range by invitation 8 (balanced): task complete, entity appears with calmer dialogue, then proceeds to the next stage 
+
+**FULL GAME MECHANICS**
+
+**Mini tasks Performance Based Pointing System:**
+
+* Completing mini tasks gains **Aura Points** that determines the winning conditions during the **Final Chase** sequence:  
+    
+  **“Performance : Aura Points”:**  
+  **Excellent** \= **30+**  
+  **Good** \= **20+**  
+  **Barely Made it** \= **10+**  
+  **Failed** \= **0+**  
+    
+  **Ending Requirements:**  
+  **Good Ending: 50 or Above AP**  
+* Earn enough Aura through exploration, dialogue, and mini-task performance.  
+* The protagonist accepts her struggles, escapes the nightmare, and eventually graduates.  
+  **Bad Ending: 49 or Below AP**  
+* Finish the story with insufficient Aura.  
+* During the final chase, the entities overwhelm her. The epilogue shows a missing-person poster, implying that her struggles ultimately consumed her.
+
+
+### **QUADRANGLE**
+
+#### **Burnout — "Push Through"**
+
+**Goal**  
+ Keep the Energy Bar above 0% for 20 seconds.
+
+**UI**
+
+* Energy Bar displayed at the top center.  
+* Countdown timer.  
+* "Push Through" button.  
+* The screen gradually darkens as energy decreases.
+
+**Core Mechanics**
+
+* Player starts with 60% Energy.  
+* Energy continuously drains by 2% every 0.5 seconds.  
+* Player must repeatedly click Push Through to restore Energy.  
+* Each successful click restores 8% Energy.  
+* Button has a 0.35-second cooldown.  
+* Repeated spamming reduces the next restoration to 4%, discouraging mindless clicking.
+
+**Psychological Pressure**  
+ Every 3–5 seconds, intrusive thoughts briefly appear on screen:
+
+* "Don't stop."  
+* "Almost there."  
+* "Everyone else can."
+
+Messages last approximately 1 second and cannot be interacted with. They partially obstruct the player's vision.
+
+**Visual Feedback**
+
+* Above 60% Energy: Normal visuals.  
+* 40–60%: Slight screen desaturation.  
+* 20–40%: Heartbeat sound and vignette effects begin.  
+* Below 20%: Entity silhouette occasionally flashes in the background without attacking.
+
+**Outcome**  
+ There is no fail state or retry. Regardless of how low Energy drops:
+
+* If Energy reaches 0% before the timer ends, the Entity immediately manifests with aggressive dialogue.  
+* If the player survives the full 20 seconds, the Entity briefly appears with unsettling dialogue instead.  
+* Either way, the story proceeds to the Regret mini-task. The outcome only affects dialogue tone and the hidden Aura earned — never whether the player continues.
+
+**Performance Evaluation**
+
+* Excellent — Energy never falls below 50%.  
+* Good — Lowest Energy remains between 30–49%.  
+* Barely Made It — Energy drops below 30% but survives.  
+* Failed — Energy reaches 0%.
+
+---
+
+#### **Regret — "Dismiss the Thoughts"**
+
+**Goal**  
+ Prevent intrusive thoughts from overwhelming the player for 20 seconds.
+
+**UI**  
+ Thought bubbles continuously appear across the screen. Each bubble contains a regret-related message.
+
+**Example Thoughts**
+
+* "You should've joined that org."  
+* "They became successful."  
+* "You wasted four years."  
+* "Too late now."
+
+**Spawn Mechanics**
+
+* Every 1.5 seconds, 3 thought bubbles spawn.  
+* Maximum of 12 bubbles can exist simultaneously.  
+* Bubbles appear at random positions.
+
+**Bubble Types**
+
+*Normal Bubble*
+
+* Requires 1 click to dismiss.
+
+*Heavy Regret Bubble*
+
+* Approximately 20% spawn chance.  
+* Larger than normal.  
+* Requires 2 clicks.
+
+*False Hope Bubble*
+
+* Approximately 10% spawn chance.  
+* Contains deceptively positive messages.  
+* Clicking it causes 2 additional regret bubbles to spawn.
+
+**Movement**  
+ Bubbles slowly expand over time. After approximately 5 seconds, they drift toward the center of the screen, making them harder to click.
+
+**Psychological Pressure**  
+ Every ignored bubble whispers quietly. More bubbles create layered whispers that increase anxiety.
+
+**Outcome**  
+ There is no fail state or retry. Regardless of how many bubbles accumulate:
+
+* If 5 untouched bubbles accumulate simultaneously, the Entity aggressively manifests.  
+* If the player prevents pile-up for the entire 20 seconds, remaining bubbles disappear and the Entity still appears, but with calmer dialogue.  
+* Either way, the story continues to the next stage. False Hope Bubbles remain as risk/reward elements that make the task less predictable, but they only affect the hidden Aura outcome — never progression.
+
+**Performance Evaluation**
+
+* Excellent — Very few bubbles accumulate.  
+* Good — Small number of bubbles accumulate.  
+* Barely Made It — Frequently close to failure.  
+* Failed — Five untouched bubbles accumulate.
+
+---
+
+### **NEW BUILDING**
+
+#### **Hallway of Doors**
+
+**Goal**  
+ Keep the Certainty Bar within a stable range while confronting memories.
+
+**UI**
+
+* Certainty Bar.  
+* One hallway with 8 sequential doors.  
+* Countdown timer for each door.
+
+**Core Mechanics**
+
+* Player starts with 50% Certainty.  
+* Doors appear one at a time.  
+* Each door remains available for 4 seconds.  
+* If ignored, the door disappears and counts as a Skip.
+
+**Door Types**
+
+*Regret Door*
+
+* Represents missed opportunities.  
+* Example: Student council rejection.  
+* Reduces Certainty by 15%.
+
+*Lost Door*
+
+* Represents uncertainty about the future.  
+* Example: "I don't enjoy coding anymore."  
+* Reduces Certainty by 10%.
+
+*Spark Door*
+
+* Represents positive memories.  
+* Example: Successfully finishing a programming project.  
+* Restores 12% Certainty.
+
+**Two-Phase Interaction**
+
+*Phase 1 — Decision*  
+ Player chooses to:
+
+* Open  
+* Ignore
+
+*Phase 2 — Reflection*  
+ If opened, the memory remains visible for approximately 2 seconds. Player cannot skip this sequence. Clicking repeatedly during the memory triggers an Avoidance Penalty, reducing Certainty by 8%.
+
+*Skipping*  
+ Ignoring a door applies only a small penalty of approximately 4%, emphasizing that avoidance is less harmful than suppressing emotions.
+
+**Certainty Zones**
+
+* 80–100%: Confident state with brighter visuals.  
+* 40–79%: Balanced state (ideal ending).  
+* 1–39%: Dark visuals and overwhelming atmosphere.  
+* 0%: Certainty bottoms out (see Outcome below).
+
+**Outcome**  
+ There is no fail state or retry. Regardless of final Certainty:
+
+* If Certainty reaches 0% before Door 8, the Entity manifests aggressively.  
+* If the player reaches Door 8 with Certainty remaining in the middle zone, the Entity still appears, but with dialogue that shifts depending on the player's final Certainty level.  
+* Either way, the story proceeds — the outcome only shapes the Entity's tone and the hidden Aura earned, never whether the player continues.
+
+**Performance Evaluation**
+
+* Excellent — Ends with 60–80% Certainty.  
+* Good — Ends with 40–59%.  
+* Barely Made It — Ends with 1–39%.  
+* Failed — Certainty reaches 0%.
+
+---
+
+### **COURT**
+
+#### **Invitation Cards**
+
+**Goal**  
+ Balance Energy, Belonging, and Toll throughout the sequence.
+
+**UI**
+
+* Energy Bar.  
+* Belonging Meter.  
+* Toll Meter.  
+* Invitation cards appear one at a time.
+
+**Starting Values**
+
+* Energy: 70  
+* Belonging: 0  
+* Toll: 0
+
+**Sequence**  
+ A total of 8 invitations appear sequentially. Each card remains on screen for 3–4 seconds.
+
+**Example Invitations**
+
+* Club Fair  
+* Exam Review  
+* Study Group  
+* Friend Hangout  
+* Hackathon  
+* Freelance Work  
+* Family Gathering  
+* Rest Day
+
+**Player Choices**
+
+*Engage*
+
+* Consumes Energy.  
+* Increases Belonging.
+
+*Skip*
+
+* Preserves Energy.  
+* Increases Toll.
+
+**Special Invitations**  
+ Certain invitations, such as Rest Day, may restore Energy or reduce Toll. These provide strategic opportunities and encourage balanced decision-making.
+
+**Example Values**
+
+*Hackathon*
+
+* Energy −20  
+* Belonging \+18
+
+*Rest Day*
+
+* Energy \+10  
+* Belonging \+2  
+* Toll −5
+
+**Visual Feedback**
+
+*High Toll:*
+
+* Ambient sounds fade.  
+* NPC presence decreases.  
+* Environment feels increasingly empty.
+
+*High Belonging:*
+
+* Ambient campus sounds return.  
+* Environment feels more alive.
+
+**Outcome**  
+ There is no fail state or retry. Regardless of how the meters land:
+
+* If Energy reaches 0 before all invitations are completed, or the Toll Meter reaches its maximum, the Entity manifests with heavier, more resigned dialogue.  
+* If the player completes all 8 invitations while keeping Energy above approximately 20 and Toll below approximately 70, the Entity appears with calmer dialogue instead.  
+* Either way, the story continues — Aura reward depends entirely on the player's overall balance, not on passing or failing.
+
+**Performance Evaluation**
+
+* Excellent — Energy remains healthy, Toll stays low, Belonging remains balanced.  
+* Good — Minor imbalance.  
+* Barely Made It — Very close to either failure condition.  
+* Failed — Energy reaches 0 or Toll maxes out.
+
+The player learns that constantly saying "yes" leads to burnout, while constantly saying "no" leads to isolation.
+
+---
+
+### **UNIVERSAL MINI-TASK FEATURES**
+
+**General Rules**
+
+* Every mini-task lasts approximately 20–30 seconds.  
+* Pause is disabled during active mini-tasks.  
+* There are no retries or restarts — a low-performance outcome fades smoothly into the Entity's manifestation and directly into story dialogue, rather than resetting the task.
+
+**Audio**
+
+* Music intensity increases as failure becomes more likely.  
+* Entity sounds become more noticeable when the player is close to losing.
+
+**Visual Feedback**
+
+* Screen effects intensify as meters approach failure thresholds.  
+* The entity becomes increasingly visible throughout the mini-task, even before fully appearing.
+
+**Aura Evaluation**  
+ After each completed mini-task, players receive a performance rating:
+
+* Excellent  
+* Good  
+* Barely Made It  
+* Failed
+
+The rating determines the amount of Aura Points earned toward unlocking the Good Ending. This rating and the Aura it generates are never shown to the player.
+
+# 
+
+# **FINAL CHASE (REVISED)**
+
+The chase no longer simply checks a hidden Aura threshold at the end. Instead, the accumulated Aura influences the experience.
+
+**High Aura**
+
+* Brighter environment.  
+* Clearer vision.  
+* Faster movement.  
+* Longer stamina.  
+* The exit remains visible.
+
+**Low Aura**
+
+* Heavy screen distortion.  
+* Reduced movement speed.  
+* More frequent entity appearances.  
+* The environment becomes harder to navigate.
+
+# **ENDING REQUIREMENTS**
+
+Instead of one hidden number, the ending reflects the protagonist's overall resilience.
+
+**Good Ending**
+
+* Earn enough Aura through exploration, dialogue, and mini-task performance.  
+* The protagonist accepts her struggles, escapes the nightmare, and eventually graduates.
+
+**Bad Ending**
+
+* Finish the story with insufficient Aura.  
+* During the final chase, the entities overwhelm her. The epilogue shows a missing-person poster, implying that her struggles ultimately consumed her.
+
+# **2D Semi-3D Clicker Visual Novel**
+
+## **Initial Game Flow**
+
+---
+
+# **PROLOGUE**
+
+### **Opening Scene**
+
+* Midnight inside the Computer Laboratory.  
+* The protagonist (a university student) suddenly wakes up alone.  
+* The school is strangely empty.  
+* Lights flicker.  
+* The player is given basic movement/tutorial controls.
+
+### **First Encounter**
+
+* While leaving the Computer Laboratory...  
+* A mysterious glowing figure appears briefly.  
+* It disappears before the player can investigate.
+
+This becomes the player's **first encounter with Entity A.**
+
+---
+
+# **HUB MAP**
+
+After exiting the building...
+
+The campus map opens.
+
+The player chooses **one of three locations** to investigate.
+
+           CAMPUS
+
+     \[Quadrangle\]
+
+\[New Building\]   \[Court\]
+
+Each location contains one major chapter.
+
+The player may complete the locations in any order.
+
+---
+
+# **LOCATION STRUCTURE (Same for all Three Maps)**
+
+Each map follows the same progression.
+
+---
+
+## **Phase 1 — Exploration**
+
+Goal:
+
+* Let the player explore.  
+* Introduce the atmosphere.
+
+Gameplay
+
+* Walking  
+* Clicking objects  
+* Reading notes  
+* Collecting small Aura points
+
+Story
+
+* Entity A occasionally appears.  
+* Only seen for a few seconds.  
+* No dialogue yet.  
+* Strange sounds.  
+* Lights flicker.
+
+Purpose
+
+Introduce mystery.
+
+---
+
+## **Phase 2 — Investigation**
+
+Goal
+
+Build suspense.
+
+Gameplay
+
+* Find clues  
+* Read documents  
+* Examine classrooms  
+* Observe environmental changes
+
+Story
+
+Entity B begins influencing the protagonist.
+
+Examples
+
+* Voices inside the student's head  
+* Hallucinations  
+* Doubting reality  
+* Short conversations with themselves
+
+Entity A becomes more visible.
+
+Purpose
+
+Increase tension.
+
+---
+
+## **Phase 3 — Mini Tasks**
+
+Goal
+
+Challenge the player.
+
+Examples
+
+Solve two simple puzzles.
+
+Examples:
+
+* Find missing key  
+* Arrange documents  
+* Restore electrical power  
+* Match symbols  
+* Complete a memory puzzle
+
+Completing both tasks triggers...
+
+---
+
+## **Major Encounter**
+
+Entity B finally appears.
+
+The player and Entity B have their first real conversation.
+
+The entity becomes hostile.
+
+The environment starts changing.
+
+Darkness spreads.
+
+Screen effects become distorted.
+
+---
+
+# **CLIMAX**
+
+The protagonist becomes overwhelmed.
+
+Reality begins breaking apart.
+
+The player experiences:
+
+* visual distortions  
+* whispers  
+* flashing lights  
+* confusing dialogue
+
+The player now reaches the final choice.
+
+---
+
+# **DECISION**
+
+The player chooses between two endings.
+
+However...
+
+The Good Ending can only be unlocked if the player has earned enough Aura Points throughout exploration.
+
+Enough Aura?
+
+     YES  
+      ↓  
+Good Ending
+
+     NO  
+      ↓  
+Forced Bad Ending  
+---
+
+# **GOOD ENDING**
+
+The protagonist resists the entities.
+
+The entities reveal part of their history.
+
+Instead of attacking...
+
+They slowly disappear.
+
+A bright light appears.
+
+Scene transition:
+
+Morning.
+
+Graduation Ceremony.
+
+The protagonist finally graduates.
+
+The nightmare is over.
+
+THE END
+
+---
+
+# **BAD ENDING**
+
+The surroundings become completely dark.
+
+Three entities appear together.
+
+They overwhelm the protagonist with endless whispers.
+
+Screen fades to black.
+
+---
+
+## **Epilogue**
+
+Morning.
+
+Campus returns to normal.
+
+Students continue their daily lives.
+
+Someone notices a Missing Person poster attached to an electric pole.
+
+The poster shows...
+
+The protagonist.
+
+Implying the student disappeared without a trace.
+
+THE END
+
+---
+
+# **MAP BREAKDOWN**
+
+## **Quadrangle**
+
+Theme
+
+* Open area  
+* Nature  
+* Isolation  
+* Shadows between trees
+
+Main Horror
+
+* Strange lights  
+* Silent whispers  
+* Entity sightings
+
+Mini Tasks
+
+* Solve environmental puzzles  
+* Collect hidden clues
+
+---
+
+## **New Building**
+
+Theme
+
+* Empty classrooms  
+* Hallways  
+* Flickering lights
+
+Main Horror
+
+* Locked rooms  
+* Documents  
+* Hallucinations
+
+Mini Tasks
+
+* Find keys  
+* Restore power
+
+---
+
+## **Court**
+
+Theme
+
+* Large open court  
+* Bleachers  
+* Foggy atmosphere
+
+Main Horror
+
+* Echoes  
+* Footsteps  
+* Sports equipment moving
+
+Mini Tasks
+
+* Memory puzzle  
+* Object investigation
+
+---
+
+# **Overall Progression**
+
+START
+
+↓
+
+Computer Laboratory (Midnight)
+
+↓
+
+Leave Building
+
+↓
+
+Campus Map
+
+↓
+
+Choose Location
+
+       ┌───────────────┐  
+       │ Quadrangle    │  
+       └───────────────┘  
+               │  
+       Exploration  
+               │  
+       Investigation  
+               │  
+         Mini Tasks  
+               │  
+       Entity Encounter  
+               │  
+            Decision  
+               │  
+     Good / Bad Ending
+
+OR
+
+       ┌───────────────┐  
+       │ New Building  │  
+       └───────────────┘  
+       (same structure)
+
+OR
+
+       ┌───────────────┐  
+       │ Court         │  
+       └───────────────┘  
+       (same structure)
+
+↓
+
+Ending
+
+↓
+
+Credits
+
 # **STORY STRUCTURE**
 
 ## **PROLOGUE**
@@ -573,205 +1514,197 @@ Protagonist
 
 # **CLIMAX**
 
-Wind grows stronger.
+The quadrangle stretches endlessly. The protagonist stops, breathing heavily. Every muscle aches. 
 
-Static.
+The wind howls through the empty courtyard. The air feels thick, like moving underwater. 
 
-Screen glitches.
+Protagonist 
 
-Burnout looks behind the protagonist.
+"Just... a little further..."
 
----
+A heavy sigh echoes through the corridor. It doesn't come from her.
 
-Burnout
+Burnout 
 
-"...He's here."
+"Why?"
 
----
+The protagonist turns. Burnout stands near the concrete benches. Slumped. Exhausted. Its glowing eyes dull.
 
-Lights cut out.
+Burnout 
 
----
+"Why take another step? Your legs are shaking. Your mind is blank."
 
-# **REGRET APPEARS**
+Protagonist 
 
-Much taller.
+"I have to finish... I have to get through this."
 
-Face hidden.
+Burnout 
 
-Voice echoes.
+"To what end? There is always another assignment. Always another deadline." 
 
----
+"You trade sleep for grades. You trade your health for a piece of paper. It never stops."
 
-Regret
+A second voice cuts in. Sharp. Judging.
 
-"You remember."
+Regret 
 
----
+"And look where it got her."
 
-Protagonist
+The shadows lengthen. REGRET steps out from the darkness. Much taller. Imposing.
 
-"...Who are you?"
+Regret 
 
----
+"You worked yourself to the bone, and yet... you still failed."
 
-Regret
+Protagonist 
 
-"You already know."
+"No... I tried my best."
 
----
+Regret 
 
-Player shakes.
+"Your best?"
 
----
+The courtyard distorts. A flash of memory.
 
-Regret
+Regret 
 
-"You should've studied."
+"Do you remember the test? The one you studied three nights for? You still couldn't answer the final question." 
 
----
+"Do you remember the friends you pushed away because you were 'too busy'? They stopped calling."
 
-Flash.
+Protagonist 
 
-Exam score:
+"Stop..."
 
-52%
+Burnout 
 
----
+"She's too tired to argue."
 
-Regret
+Burnout takes a slow, dragging step forward.
 
-"Maybe then..."
+Burnout 
 
-Flash.
+"Just lay down. Close your eyes. It's so much easier to stop caring." 
 
-Missed deadline.
+"If you give up now, you won't have to feel this exhaustion anymore. The pressure will vanish."
 
----
+Regret 
 
-Regret
+"She can't give up. She's terrified of proving everyone right. Terrified that all those sacrifices meant nothing."
 
-"Maybe then..."
+Protagonist 
 
-Flash.
+"I didn't sacrifice it for nothing\! I'm building a future\!"
 
-Friend leaving.
+Regret 
 
----
+"A future built on broken pieces of yourself. Every choice you made left you emptier."
 
-Regret
+Burnout 
 
-"Maybe then..."
+"Look at you. There is barely anything left."
 
----
+The protagonist clutches her chest. Her heart is pounding. They are right. The fatigue. The guilt. It's suffocating.
 
-Burnout
+Protagonist 
 
-"She was tired."
+"... Is this all there is? Just... being tired and hating myself for it?"
 
----
+Silence. Burnout and Regret do not advance. They stand perfectly still.
 
-Regret
+Burnout 
 
-"She was lazy."
+"... We are only the symptoms."
 
----
+Protagonist 
 
-Burnout
+"What?"
 
-"She tried."
+Regret 
 
----
+"You think we are the enemy. You think fighting us will save you." 
 
-Regret
+"But we are only fragments of a larger crack."
 
-"Not enough."
+The courtyard lamps shatter simultaneously. Total darkness descends. The ground begins to groan, as if buckling under immense weight.
 
----
+Burnout 
 
-Both begin speaking over each other.
+"The exhaustion you feel... the guilt that haunts you..." 
 
-Text boxes overlap.
+"They were just preparing you for him."
 
-The music distorts.
+A sound ripples through the dark. Not a footstep. A deep, resonant dragging sound. Like the tearing of metal.
 
----
+Regret 
 
-Burnout
+"When every mistake is piled up... when the exhaustion breaks your will to live..." 
 
-"Keep working."
+"What is left?"
 
----
+A massive silhouette begins to rise from the very shadows beneath them. Black sludge pools at the protagonist's feet, clinging to her shoes.
 
-Regret
+Protagonist 
 
-"Too late."
+"No... no, what is that?\!"
 
----
+Burnout and Regret begin to sink into the sludge. They do not resist. They simply allow the darkness to reclaim them.
 
-Burnout
+Burnout 
 
-"Keep going."
+"The end result."
 
----
+The towering figure fully manifests. It has no face, only a hollow void that pulls at the light. Whispers emanate from it—not just Burnout's tired voice, not just Regret's sharp tone, but hundreds of overlapping voices crying out in hopelessness.
 
-Regret
+Despair (Whispers) 
 
-"You'll never catch up."
+"Give up..." "It was all for nothing..." "There is no escape..."
 
----
+It isn't just an emotion anymore. It is a sheer, undeniable fact of her existence. Despair. Suddenly, the heavy iron gates at the far end of the quadrangle burst open. A sliver of moonlight cuts through the oppressive dark.
 
-The screen completely glitches.
+Protagonist 
 
-Silence. Everything stops. Footsteps. A monstrous shadow appears. No dialogue. Only breathing.
+"I have to run."
 
-Despair appears.
+The entity lets out a deafening, hollow scream. The ground violently shakes. The chase begins.
 
-# **CHASE GAMEPLAY**
+**CHASE GAMEPLAY** 
 
-During the Chase
+During the Chase As the player runs, short whispers play occasionally.
 
-As the player runs, short whispers play occasionally.
+Narrator "The weight grows heavier."
 
-Narrator
+Narrator "There is no rest."
 
-"The weight grows heavier."
-
-Narrator
-
-"There is no rest."
-
-Narrator
-
-"It will consume you."
+Narrator "It will consume you."
 
 **If the Player Reaches the Exit (Good Path)**
 
-The protagonist stumbles toward the light. Her body aches with exhaustion.
+The protagonist stumbles toward the blinding light ahead. Her body aches with absolute exhaustion.
 
-Protagonist
+Protagonist 
 
-"I'm tired... but I can't stop here."
+"I'm so tired... but I can't stop here."
 
-She steps into the light.
+With one final push, she forces herself forward. She steps into the light, leaving the shadows behind. Everything fades to white.
 
-Everything fades to white.
+**If Despair Catches the Player (Bad Path)** 
 
-**If Despair Catches the Player (Bad Path)**
+The exhaustion finally takes over. Her legs give out, and she collapses onto the cold ground. 
 
-The shadows pull her down. She is too tired to stand.
+In an instant, the encroaching darkness swallows her completely. Heavy, suffocating hands of shadow pull her down.
 
-Protagonist
+Protagonist 
 
-"Just let me rest..."
+"I can't... I have nothing left..."
 
-The whispers merge into one voice.
+The cacophony of whispers finally ceases, merging into a single, overwhelming silence.
 
-Despair
+Despair 
 
-"Sleep."
+"Then rest. Forever."
 
-Everything goes black.
+She closes her eyes. Everything goes black.
 
 ---
 
@@ -3514,31 +4447,211 @@ Deprivation
 
 ---
 
-During the climax:
+# **PERFORMANCE EVALUATION**
+
+(Depending on how the player balanced Energy and Toll during the Invitation Cards mini-game, one of the following exchanges occurs before the climax begins)
+
+**\[Balanced \- Played Well\]**
+
+Lost: "You tried to hold everything. You ran in every direction..."
+
+Deprivation: "...but your hands are still empty."
+
+Protagonist: "I... I tried to keep up. I didn't want to fall behind."
+
+Deprivation: "And yet, you never caught up to what you truly wanted."
+
+Lost: "You only arrived nowhere."
+
+Protagonist: "I made it this far, didn't I? I survived."
+
+**\[Burnout \- Energy Hit 0 (Said YES too much)\]**
+
+Lost: "You gave them everything. Every hour. Every piece of yourself."
+
+Protagonist: "I thought... if I just said yes, I'd find where I belong."
+
+Deprivation: "But you gave until there was nothing left for you."
+
+Lost: "Now, you are empty."
+
+Deprivation: "A hollow shell, echoing with everyone else's demands."
+
+Protagonist: "I just... I just wanted to be enough."
+
+**\[Isolated \- Toll Maxed (Said NO too much)\]**
+
+Lost: "You pushed them all away. You refused to walk with them."
+
+Protagonist: "I was protecting myself\! It was too much."
+
+Deprivation: "You built walls so high that no one could reach you."
+
+Lost: "And now, you are completely alone."
+
+Deprivation: "Safe from the world. Starving in the dark."
+
+Protagonist: "... I didn't know what else to do."
 
 ---
+
+# **Climax:**
 
 Lost
 
 "She doesn't know who she is."
 
----
-
 Deprivation
 
 "Because she forgot."
-
----
 
 Lost
 
 "She chased success."
 
----
-
 Deprivation
 
 "...and left herself behind."
+
+Protagonist
+
+"I did what I had to do\! You don't understand the pressure\!"
+
+Lost
+
+"We understand better than anyone."
+
+Deprivation
+
+"We are the hollow space inside your chest."
+
+Lost
+
+"The feeling of waking up and not recognizing your own life."
+
+Protagonist
+
+"Then tell me how to fix it\! If you know so much, tell me what to do\!"
+
+Deprivation
+
+"We cannot fill what has always been empty."
+
+Lost
+
+"We are only echoes."
+
+Protagonist
+
+"Echoes of what?"
+
+Deprivation
+
+"Of a silence you refused to listen to."
+
+Lost
+
+"A silence that is no longer satisfied with just waiting."
+
+The overhead lights in the court shatter simultaneously. Total darkness descends. The polished wood floor begins to splinter and crack.
+
+Deprivation
+
+"The loneliness... the longing..."
+
+Lost
+
+"They were just the beginning."
+
+A profound, unnatural stillness fills the room. The shadows stretch across the court, pooling together at the center.
+
+Protagonist
+
+"What is happening?"
+
+Lost and Deprivation do not move. They watch calmly as the darkness consumes the room.
+
+Deprivation
+
+"When you lose your way, and you starve your soul..."
+
+Lost
+
+"...there is only one place left to fall."
+
+A massive, shifting silhouette rises from the center of the court. It has no discernible shape, only a writhing mass of shadows that pull the warmth from the air.
+
+Burnout and Regret's whispers can be heard faintly within it, joined now by the soft, hollow tones of Lost and Deprivation.
+
+Lost and Deprivation fade into the shadows, offering no resistance. They merge into the whole.
+
+Despair
+
+"You have nowhere to go..."
+
+"You will always be empty..."
+
+"Stay in the dark..."
+
+It is the terrifying sum of her isolation and her longing. Despair.
+
+Suddenly, the heavy double doors at the far end of the gym burst open. A sliver of moonlight cuts through the oppressive dark.
+
+Protagonist
+
+"I won't let it swallow me."
+
+The entity lets out a deafening, hollow scream. The ground violently shakes. The chase begins.
+
+---
+
+# **CHASE GAMEPLAY**
+
+During the Chase
+
+As the player runs, short whispers play occasionally.
+
+Narrator
+
+"The court feels endless."
+
+Narrator
+
+"You are running in circles."
+
+Narrator
+
+"There is nothing left."
+
+**If the Player Reaches the Exit (Good Path)**
+
+The protagonist stumbles toward the blinding light ahead. Her body aches, and the shadows claw at her heels.
+
+Protagonist
+
+"I don't know where I'm going... but anywhere is better than here."
+
+With one final push, she forces herself forward.
+
+She steps into the light, leaving the shadows behind. Everything fades to white.
+
+**If Despair Catches the Player (Bad Path)**
+
+The protagonist's legs give out. She collapses onto the polished floor of the court.
+
+In an instant, the encroaching darkness swallows her completely. Heavy, suffocating hands of shadow pull her down.
+
+Protagonist
+
+"I'm so lost... I'm so empty..."
+
+The cacophony of whispers finally ceases, merging into a single, overwhelming silence.
+
+Despair
+
+"Then be nothing."
+
+She closes her eyes. Everything goes black.
 
 ---
 

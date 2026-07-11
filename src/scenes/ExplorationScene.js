@@ -24,6 +24,7 @@ export class ExplorationScene extends Phaser.Scene {
 
   init(data) {
     const routeConfig = EXPLORATIONS[data.routeKey];
+    this.routeConfig  = routeConfig;
     this.phaseConfig  = routeConfig.phases[data.phase];
     this.background   = routeConfig.background;
     this.routeLabel   = routeConfig.label;
@@ -38,7 +39,17 @@ export class ExplorationScene extends Phaser.Scene {
     const { width: W, height: H } = this.scale;
 
     // ── Background ───────────────────────────────────────────────────────
-    this.add.image(W / 2, H / 2, this.background).setDisplaySize(W, H);
+    this.bgImage = this.add.image(W / 2, H / 2, this.background).setDisplaySize(W, H);
+    
+    // ── Slice Texture Frames (if configured) ─────────────────────────────
+    this.phaseConfig.hotspots.forEach(hs => {
+      if (hs.texture && hs.frameRect) {
+        const tex = this.textures.get(hs.texture);
+        if (tex && !tex.has(hs.id)) {
+          tex.add(hs.id, 0, hs.frameRect.x, hs.frameRect.y, hs.frameRect.w, hs.frameRect.h);
+        }
+      }
+    });
 
     // Atmospheric dark overlay
     this.add.rectangle(W / 2, H / 2, W, H, 0x000000, 0.35);
@@ -110,11 +121,23 @@ export class ExplorationScene extends Phaser.Scene {
 
   // ── Hotspot creation ────────────────────────────────────────────────────
   createHotspot(hs) {
-    const { x, y, w, h, color, label, dialogueData, id } = hs;
+    const { x, y, w, h, color, label, dialogueData, id, texture, visual } = hs;
 
-    const bg = this.add.rectangle(x, y, w, h, color, 0.7)
-      .setStrokeStyle(1, 0x888888)
-      .setInteractive({ useHandCursor: true });
+    let bg;
+    if (texture) {
+      bg = this.add.image(x, y, texture, id)
+        .setInteractive({ useHandCursor: true });
+      if (visual) {
+        if (visual.scale !== undefined) bg.setScale(visual.scale);
+        if (visual.offsetX !== undefined) bg.x += visual.offsetX;
+        if (visual.offsetY !== undefined) bg.y += visual.offsetY;
+        if (visual.rotation !== undefined) bg.setRotation(visual.rotation);
+      }
+    } else {
+      bg = this.add.rectangle(x, y, w, h, color, 0.7)
+        .setStrokeStyle(1, 0x888888)
+        .setInteractive({ useHandCursor: true });
+    }
 
     const lbl = this.add.text(x, y + h / 2 + 10, label, {
       fontFamily: '"Courier New", monospace',
@@ -133,8 +156,14 @@ export class ExplorationScene extends Phaser.Scene {
       ease: 'Sine.easeInOut',
     });
 
-    bg.on('pointerover', () => bg.setStrokeStyle(1, 0xffffff));
-    bg.on('pointerout',  () => bg.setStrokeStyle(1, 0x888888));
+    bg.on('pointerover', () => {
+      if (texture) bg.setTint(0xffffff);
+      else bg.setStrokeStyle(1, 0xffffff);
+    });
+    bg.on('pointerout', () => {
+      if (texture) bg.clearTint();
+      else bg.setStrokeStyle(1, 0x888888);
+    });
 
     bg.on('pointerdown', () => {
       if (this.popupActive) return;
@@ -145,10 +174,15 @@ export class ExplorationScene extends Phaser.Scene {
         this.visitedCount++;
 
         // Dim visited hotspot
-        bg.setFillStyle(color, 0.3).setStrokeStyle(1, 0x444444);
+        if (texture) {
+          bg.setTint(0x888888);
+          bg.setAlpha(0.6);
+        } else {
+          bg.setFillStyle(color, 0.3).setStrokeStyle(1, 0x444444);
+          bg.setAlpha(0.3);
+        }
         lbl.setColor('#444444');
         pulse.stop();
-        bg.setAlpha(0.3);
 
         // Reveal CONTINUE when ALL hotspots in the phase are clicked
         if (this.visitedCount >= this.phaseConfig.hotspots.length) {
@@ -226,6 +260,18 @@ export class ExplorationScene extends Phaser.Scene {
     this.popupIndex  = 0;
     this.popup.setVisible(true);
     this.hintText.setVisible(false);
+    
+    // Optional background blur
+    if (this.routeConfig.blurIntensity) {
+      if (!this.bgBlur) this.bgBlur = this.bgImage.postFX.addBlur(0, 0, 0);
+      this.tweens.add({
+        targets: this.bgBlur,
+        strength: this.routeConfig.blurIntensity,
+        duration: 300,
+        ease: 'Sine.easeOut'
+      });
+    }
+    
     this.showPopupStep(0);
   }
 
@@ -312,6 +358,19 @@ export class ExplorationScene extends Phaser.Scene {
     this.popup.setVisible(false);
     this.hintText.setVisible(true);
     this.clearChoices();
+    
+    if (this.bgBlur) {
+      this.tweens.add({
+        targets: this.bgBlur,
+        strength: 0,
+        duration: 300,
+        ease: 'Sine.easeIn',
+        onComplete: () => {
+          this.bgImage.postFX.remove(this.bgBlur);
+          this.bgBlur = null;
+        }
+      });
+    }
   }
 
   // ── CONTINUE transition ───────────────────────────────────────────────────
