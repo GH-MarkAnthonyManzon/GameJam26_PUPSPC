@@ -47,6 +47,11 @@ import {
   court_cards_balanced,
   court_cards_burnout,
   court_cards_isolated,
+  court_chase_checkpoint_1,
+  court_chase_checkpoint_2,
+  court_chase_checkpoint_3,
+  court_chase_resolution_good,
+  court_chase_resolution_bad,
 } from './court.js';
 import { ending_good, ending_bad } from './endings.js';
 import {
@@ -98,6 +103,11 @@ export const DIALOGUES = {
   court_cards_balanced,
   court_cards_burnout,
   court_cards_isolated,
+  court_chase_checkpoint_1,
+  court_chase_checkpoint_2,
+  court_chase_checkpoint_3,
+  court_chase_resolution_good,
+  court_chase_resolution_bad,
 
   // Endings
   ending_good,

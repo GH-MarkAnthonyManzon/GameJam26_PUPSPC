@@ -22,7 +22,7 @@ export const invitationCardsConfig = {
   startBelonging: 0,
   startToll: 0,
 
-  cardTimeout: 3500,    // ms per card before auto-skip (PDF: 3–4s)
+  cardTimeout: 5000,    // ms per card before auto-skip (Updated for readability)
 
   // ── Failure thresholds ────────────────────────────────────────────────────
   energyMin: 0,
@@ -33,15 +33,15 @@ export const invitationCardsConfig = {
 
   // ── Card sequence (8 invitations from PDF) ────────────────────────────────
   cards: [
-    { label: 'Club Fair',        energyCost: 15, belongingGain: 12, tollGain: 0  },
-    { label: 'Exam Review',      energyCost: 10, belongingGain: 8,  tollGain: 0  },
-    { label: 'Study Group',      energyCost: 12, belongingGain: 10, tollGain: 0  },
-    { label: 'Friend Hangout',   energyCost: 14, belongingGain: 14, tollGain: 0  },
-    { label: 'Hackathon',        energyCost: 20, belongingGain: 18, tollGain: 0  },
-    { label: 'Freelance Work',   energyCost: 18, belongingGain: 5,  tollGain: 0  },
-    { label: 'Family Gathering', energyCost: 10, belongingGain: 10, tollGain: 0  },
+    { label: 'Club Fair',        description: 'Join multiple clubs to build connections, but you already feel stretched too thin.', energyCost: 15, belongingGain: 12, tollGain: 0  },
+    { label: 'Exam Review',      description: 'A classmate invites you to cram, guaranteeing better scores at the cost of your sleep.', energyCost: 10, belongingGain: 8,  tollGain: 0  },
+    { label: 'Study Group',      description: 'Help struggling peers pass, though you barely have time to finish your own work.', energyCost: 12, belongingGain: 10, tollGain: 0  },
+    { label: 'Friend Hangout',   description: 'Your friends invite you out after weeks apart, but you\'re already mentally exhausted from consecutive deadlines.', energyCost: 14, belongingGain: 14, tollGain: 0  },
+    { label: 'Hackathon',        description: 'An incredible resume builder that demands 48 hours of non-stop, draining focus.', energyCost: 20, belongingGain: 18, tollGain: 0  },
+    { label: 'Freelance Work',   description: 'Take on a side project for extra cash, ignoring how badly your body needs a break.', energyCost: 18, belongingGain: 5,  tollGain: 0  },
+    { label: 'Family Gathering', description: 'Your family expects you to visit, but the emotional labor feels overwhelming right now.', energyCost: 10, belongingGain: 10, tollGain: 0  },
     // Rest Day: special — restores energy, reduces toll (strategic opportunity)
-    { label: 'Rest Day',         energyCost: -10, belongingGain: 2, tollGain: -5, special: true },
+    { label: 'Rest Day',         description: 'Turn off your phone and sleep. You might miss out, but you can finally breathe.', energyCost: -10, belongingGain: 2, tollGain: -5, special: true },
   ],
 
   // ── Aura evaluation ───────────────────────────────────────────────────────

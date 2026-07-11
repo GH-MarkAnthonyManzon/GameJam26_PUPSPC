@@ -646,10 +646,7 @@ export class ChaseScene extends Phaser.Scene {
     // NOTE: chaseActive and inCheckpoint are NOT changed — chase continues.
 
     // Resolve dialogue key exactly as before (route-specific override)
-    let dialogueKey = cp.dialogueKey;
-    if (GameState.chosenRoute === 'newbuilding' || GameState.chosenRoute === 'quadrangle') {
-      dialogueKey = `${GameState.chosenRoute}_${dialogueKey}`;
-    }
+    const dialogueKey = `${GameState.chosenRoute}_${cp.dialogueKey}`;
 
     // Look up dialogue from the same DIALOGUES registry that DialogueScene uses
     const steps = DIALOGUES[dialogueKey] || [];
@@ -722,9 +719,11 @@ export class ChaseScene extends Phaser.Scene {
 
     this.cameras.main.fadeOut(800, 0, 0, 0);
     this.cameras.main.once('camerafadeoutcomplete', () => {
-      if (GameState.chosenRoute === 'newbuilding' || GameState.chosenRoute === 'quadrangle') {
-        const endingKey = GameState.getEnding();
-        const resolutionKey = `${GameState.chosenRoute}_chase_resolution_${endingKey}`;
+      const endingKey = GameState.getEnding();
+      const resolutionKey = `${GameState.chosenRoute}_chase_resolution_${endingKey}`;
+      
+      // If the route has a specific resolution dialogue, play it first
+      if (DIALOGUES[resolutionKey]) {
         this.scene.start('DialogueScene', {
           dialogueKey: resolutionKey,
           nextScene: 'EndingScene',

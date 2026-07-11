@@ -823,6 +823,15 @@ export class MiniGameScene extends Phaser.Scene {
       fontSize: '22px',
       color: '#ffffff',
     }).setOrigin(0.5);
+    this.cardDesc = this.add.text(W / 2, H / 2 - 15, '', {
+      fontFamily: 'Georgia, serif',
+      fontSize: '13px',
+      color: '#cccccc',
+      fontStyle: 'italic',
+      align: 'center',
+      wordWrap: { width: 260 },
+      lineSpacing: 4
+    }).setOrigin(0.5);
     this.cardTimer = this.add.rectangle(W / 2 - 150, H / 2 + 65, 300, 5, 0x555555).setOrigin(0, 0.5);
     this.cardTimerBar = this.add.rectangle(W / 2 - 150, H / 2 + 65, 300, 5, 0xe67e22).setOrigin(0, 0.5);
 
@@ -892,6 +901,7 @@ export class MiniGameScene extends Phaser.Scene {
 
     this.cardNumTxt.setText(`Card ${index + 1} of ${cfg.cards.length}`);
     this.cardTitle.setText(card.label);
+    if (this.cardDesc) this.cardDesc.setText(card.description || '');
     this.cardBg.setStrokeStyle(2, card.special ? 0xf39c12 : 0x555555);
 
     // Timer bar countdown
