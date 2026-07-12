@@ -72,8 +72,8 @@ export class MiniGameScene extends Phaser.Scene {
     // Mini-game label (top-left, subtle)
     this.add.text(16, 12, `[ ${this.config.label.toUpperCase()} ]`, {
       fontFamily: '"Courier New", monospace',
-      fontSize: '11px',
-      color: '#333333',
+      fontSize: '16px',
+      color: '#aaaaaa',
       letterSpacing: 2,
     });
 
@@ -119,23 +119,24 @@ export class MiniGameScene extends Phaser.Scene {
     this.energyBarFill.setOrigin(0, 0.5);
     this.energyBarFill.x = 40;
 
-    this.add.text(W / 2, 40, '', { fontFamily: 'monospace', fontSize: '11px', color: '#888' })
+    this.add.text(W / 2, 40, '', { fontFamily: 'monospace', fontSize: '14px', color: '#cccccc' })
       .setOrigin(0.5)
       .setDepth(2);
 
     // ── Timer display ────────────────────────────────────────────────────
     this.timerTxt = this.add.text(W / 2, 80, `${cfg.duration}s`, {
       fontFamily: '"Courier New", monospace',
-      fontSize: '16px',
-      color: '#555555',
+      fontSize: '22px',
+      color: '#cccccc',
     }).setOrigin(0.5);
 
     // ── Intrusive thought overlay ────────────────────────────────────────
     this.thoughtTxt = this.add.text(W / 2, H / 2 - 60, '', {
       fontFamily: 'Georgia, serif',
-      fontSize: '20px',
-      color: '#ff7675',
+      fontSize: '28px',
+      color: '#ff9999',
       fontStyle: 'italic',
+      align: 'center',
     }).setOrigin(0.5).setAlpha(0).setDepth(5);
 
     // ── Screen darkening overlay (energy-linked) ──────────────────────────
@@ -149,7 +150,7 @@ export class MiniGameScene extends Phaser.Scene {
       .setDepth(6);
     const btnTxt = this.add.text(W / 2, H / 2 + 60, 'PUSH THROUGH', {
       fontFamily: '"Courier New", monospace',
-      fontSize: '18px',
+      fontSize: '22px',
       color: '#ffffff',
       letterSpacing: 2,
     }).setOrigin(0.5).setDepth(7);
@@ -317,15 +318,15 @@ export class MiniGameScene extends Phaser.Scene {
     // ── Timer display ────────────────────────────────────────────────────
     this.timerTxt = this.add.text(W / 2, 30, `${cfg.duration}s`, {
       fontFamily: '"Courier New", monospace',
-      fontSize: '16px',
-      color: '#555555',
+      fontSize: '22px',
+      color: '#cccccc',
     }).setOrigin(0.5);
 
     // Accumulation warning
     this.accumTxt = this.add.text(W / 2, H - 35, '', {
       fontFamily: '"Courier New", monospace',
-      fontSize: '12px',
-      color: '#e74c3c',
+      fontSize: '16px',
+      color: '#ff6b6b',
     }).setOrigin(0.5);
 
     // ── Countdown timer ───────────────────────────────────────────────────
@@ -391,8 +392,8 @@ export class MiniGameScene extends Phaser.Scene {
 
     const txt = this.add.text(x, y, msg, {
       fontFamily: 'Georgia, serif',
-      fontSize: '10px',
-      color: '#cccccc',
+      fontSize: '14px',
+      color: '#ffffff',
       wordWrap: { width: size - 10 },
       align: 'center',
     }).setOrigin(0.5);
@@ -520,8 +521,8 @@ export class MiniGameScene extends Phaser.Scene {
     const barW = W - 80;
     this.add.text(W / 2, 20, 'CERTAINTY', {
       fontFamily: '"Courier New", monospace',
-      fontSize: '11px',
-      color: '#555555',
+      fontSize: '14px',
+      color: '#aaaaaa',
       letterSpacing: 3,
     }).setOrigin(0.5);
 
@@ -532,8 +533,8 @@ export class MiniGameScene extends Phaser.Scene {
     // ── Door progress indicator ───────────────────────────────────────────
     this.doorProgressTxt = this.add.text(W / 2, 65, `Door 1 of ${cfg.totalDoors}`, {
       fontFamily: '"Courier New", monospace',
-      fontSize: '12px',
-      color: '#444444',
+      fontSize: '16px',
+      color: '#aaaaaa',
     }).setOrigin(0.5);
 
     // ── Door visual ───────────────────────────────────────────────────────
@@ -542,7 +543,7 @@ export class MiniGameScene extends Phaser.Scene {
     this.doorLabel = this.add.text(W / 2, H / 2 - 20, '', {
       fontFamily: 'Georgia, serif',
       fontSize: '14px',
-      color: '#888888',
+      color: '#dddddd',
       wordWrap: { width: 160 },
       align: 'center',
     }).setOrigin(0.5);
@@ -557,7 +558,7 @@ export class MiniGameScene extends Phaser.Scene {
       .setInteractive({ useHandCursor: true });
     this.add.text(W / 2 - 110, H - 80, 'OPEN', {
       fontFamily: '"Courier New", monospace',
-      fontSize: '16px',
+      fontSize: '20px',
       color: '#2ecc71',
     }).setOrigin(0.5);
 
@@ -566,7 +567,7 @@ export class MiniGameScene extends Phaser.Scene {
       .setInteractive({ useHandCursor: true });
     this.add.text(W / 2 + 110, H - 80, 'IGNORE', {
       fontFamily: '"Courier New", monospace',
-      fontSize: '16px',
+      fontSize: '20px',
       color: '#a29bfe',
     }).setOrigin(0.5);
 
@@ -689,7 +690,7 @@ export class MiniGameScene extends Phaser.Scene {
       const quoteTxt = this.add.text(W / 2, H / 2 - 200, quote, {
         fontFamily: 'Georgia, serif',
         fontSize: '14px',
-        color: '#ff7675',
+        color: '#ff9999',
         fontStyle: 'italic',
         align: 'center',
         lineSpacing: 5
@@ -851,13 +852,13 @@ export class MiniGameScene extends Phaser.Scene {
       .setStrokeStyle(2, 0x555555);
     this.cardTitle = this.add.text(W / 2, H / 2 - 80, '', {
       fontFamily: 'Georgia, serif',
-      fontSize: '22px',
+      fontSize: '24px',
       color: '#ffffff',
     }).setOrigin(0.5);
     this.cardDesc = this.add.text(W / 2, H / 2 - 15, '', {
       fontFamily: 'Georgia, serif',
-      fontSize: '13px',
-      color: '#cccccc',
+      fontSize: '15px',
+      color: '#ffffff',
       fontStyle: 'italic',
       align: 'center',
       wordWrap: { width: 260 },
@@ -869,8 +870,8 @@ export class MiniGameScene extends Phaser.Scene {
     // Card number
     this.cardNumTxt = this.add.text(W / 2, H / 2 - 110, '', {
       fontFamily: '"Courier New", monospace',
-      fontSize: '11px',
-      color: '#444444',
+      fontSize: '16px',
+      color: '#aaaaaa',
       letterSpacing: 2,
     }).setOrigin(0.5);
 
@@ -880,7 +881,7 @@ export class MiniGameScene extends Phaser.Scene {
       .setInteractive({ useHandCursor: true });
     this.add.text(W / 2 - 110, H - 80, 'ENGAGE', {
       fontFamily: '"Courier New", monospace',
-      fontSize: '16px',
+      fontSize: '20px',
       color: '#27ae60',
     }).setOrigin(0.5);
 
@@ -889,7 +890,7 @@ export class MiniGameScene extends Phaser.Scene {
       .setInteractive({ useHandCursor: true });
     this.add.text(W / 2 + 110, H - 80, 'SKIP', {
       fontFamily: '"Courier New", monospace',
-      fontSize: '16px',
+      fontSize: '20px',
       color: '#8e44ad',
     }).setOrigin(0.5);
 
@@ -897,9 +898,9 @@ export class MiniGameScene extends Phaser.Scene {
     skipBg.on('pointerdown',   () => this.handleSkip());
 
     // Live meter display texts
-    this.energyTxt    = this.add.text(40,  70, '', { fontFamily: 'monospace', fontSize: '11px', color: '#e74c3c' });
-    this.belongingTxt = this.add.text(320, 70, '', { fontFamily: 'monospace', fontSize: '11px', color: '#27ae60' });
-    this.tollTxt      = this.add.text(600, 70, '', { fontFamily: 'monospace', fontSize: '11px', color: '#8e44ad' });
+    this.energyTxt    = this.add.text(40,  70, '', { fontFamily: 'monospace', fontSize: '14px', color: '#e74c3c' });
+    this.belongingTxt = this.add.text(320, 70, '', { fontFamily: 'monospace', fontSize: '14px', color: '#27ae60' });
+    this.tollTxt      = this.add.text(600, 70, '', { fontFamily: 'monospace', fontSize: '14px', color: '#8e44ad' });
 
     this.showCard(0);
   }
@@ -908,8 +909,8 @@ export class MiniGameScene extends Phaser.Scene {
     const { width: W } = this.scale;
     this.add.text(x, y - 18, label, {
       fontFamily: '"Courier New", monospace',
-      fontSize: '9px',
-      color: '#555555',
+      fontSize: '12px',
+      color: '#aaaaaa',
       letterSpacing: 2,
     }).setOrigin(0.5);
     this.add.rectangle(x, y, 160, 12, 0x222222).setStrokeStyle(1, 0x333333);

@@ -63,12 +63,12 @@ export class ExplorationScene extends Phaser.Scene {
     });
 
     // ── Exploration prompt ───────────────────────────────────────────────
-    this.hintText = this.add.text(W / 2, H - 240, 'Investigate the area. Click on objects.', {
+    this.hintText = this.add.text(W / 2, 40, 'Investigate the area. Click on objects.', {
       fontFamily: 'Georgia, serif',
-      fontSize: '13px',
-      color: '#444444',
+      fontSize: '16px',
+      color: '#aaaaaa',
       fontStyle: 'italic',
-    }).setOrigin(0.5);
+    }).setOrigin(0.5, 0);
 
     // ── Hotspot buttons ──────────────────────────────────────────────────
     this.hotspotBtns = [];
@@ -141,8 +141,8 @@ export class ExplorationScene extends Phaser.Scene {
 
     const lbl = this.add.text(x, y + h / 2 + 10, label, {
       fontFamily: '"Courier New", monospace',
-      fontSize: '10px',
-      color: '#777777',
+      fontSize: '14px',
+      color: '#dddddd',
       letterSpacing: 1,
     }).setOrigin(0.5, 0);
 
@@ -181,7 +181,7 @@ export class ExplorationScene extends Phaser.Scene {
           bg.setFillStyle(color, 0.3).setStrokeStyle(1, 0x444444);
           bg.setAlpha(0.3);
         }
-        lbl.setColor('#444444');
+        lbl.setColor('#999999');
         pulse.stop();
 
         // Reveal CONTINUE when ALL hotspots in the phase are clicked
@@ -203,24 +203,30 @@ export class ExplorationScene extends Phaser.Scene {
 
   // ── Inline popup ─────────────────────────────────────────────────────────
   buildPopup(W, H) {
-    this.popup = this.add.container(0, H - POPUP_H);
+    this.popup = this.add.container(0, 0);
     this.popup.setVisible(false);
 
-    const popupBg = this.add.rectangle(W / 2, POPUP_H / 2, W - 20, POPUP_H - 10, 0x111111, 0.75)
+    const BOX_H = 140;
+    const BOX_Y = H - BOX_H / 2 - 15;
+
+    const popupBg = this.add.rectangle(W / 2, BOX_Y, W - 40, BOX_H, 0x111111, 0.75)
       .setStrokeStyle(2, 0xffffff);
-    this.popupSpeaker = this.add.text(30, 12, '', {
-      fontFamily: 'Georgia, serif', fontSize: '13px', color: '#a29bfe',
+
+    this.popupSpeaker = this.add.text(45, BOX_Y - BOX_H / 2 - 12, '', {
+      fontFamily: 'Georgia, serif', fontSize: '18px', color: '#f1c40f', fontStyle: 'bold'
+    }).setOrigin(0, 0.5).setStroke('#000000', 4);
+
+    this.popupText = this.add.text(30, H - BOX_H - 5, '', {
+      fontFamily: 'Georgia, serif', fontSize: '18px', color: '#ffffff',
+      wordWrap: { width: 560 }, lineSpacing: 6,
     });
-    this.popupText = this.add.text(30, 36, '', {
-      fontFamily: 'Georgia, serif', fontSize: '17px', color: '#ffffff',
-      wordWrap: { width: W - 80 }, lineSpacing: 5,
-    });
-    this.popupHint = this.add.text(W - 30, POPUP_H - 20, '▼', {
-      fontFamily: 'monospace', fontSize: '13px', color: '#444444',
+
+    this.popupHint = this.add.text(W - 35, BOX_Y + BOX_H / 2 - 20, '▼', {
+      fontFamily: 'monospace', fontSize: '13px', color: '#ffffff',
     }).setOrigin(0.5);
 
     this.tweens.add({
-      targets: this.popupHint, y: POPUP_H - 15, alpha: 0.3, duration: 500, yoyo: true, repeat: -1,
+      targets: this.popupHint, y: BOX_Y + BOX_H / 2 - 15, alpha: 0.5, duration: 500, yoyo: true, repeat: -1,
     });
 
     this.popup.add([popupBg, this.popupSpeaker, this.popupText, this.popupHint]);

@@ -17,9 +17,10 @@
 // ── First Burnout encounter ───────────────────────────────────────────────
 export const quadrangle_burnout_1 = [
   {
+    // vfx : darkens slightly 
     id: 'qb1_01',
     speaker: null,
-    text: 'The screen darkens slightly. A silhouette appears beneath a tree. No face. Only glowing eyes.',
+    text: 'The screen darkens slightly. A silhouette appears beneath a tree.',
     portrait: 'portrait_burnout', sprite: 'sprite_burnout',
     background: 'bg_outside',
   },
@@ -27,13 +28,13 @@ export const quadrangle_burnout_1 = [
     id: 'qb1_02',
     speaker: 'Burnout',
     text: '...',
-    portrait: 'portrait_burnout', sprite: 'sprite_burnout',
+    portrait: null, sprite: null,
     background: null,
   },
   {
     id: 'qb1_03',
     speaker: null,
-    text: 'No response. Player walks closer.',
+    text: 'No response. She walks closer.',
     portrait: null,
     background: null,
   },
@@ -48,7 +49,7 @@ export const quadrangle_burnout_1 = [
     id: 'qb1_05',
     speaker: 'Protagonist',
     text: '...Who are you?',
-    portrait: 'port_mc_default', sprite: 'spr_mc_default',
+    portrait: 'port_mc_default', sprite: 'spr_mc_shocked',
     background: null,
   },
   {
@@ -214,7 +215,7 @@ export const quadrangle_pushthrough_fail = [
     id: 'qptf_02',
     speaker: 'Protagonist',
     text: 'I...',
-    portrait: 'port_mc_default', sprite: 'spr_mc_default',
+    portrait: 'port_mc_default', sprite: 'spr_mc_shocked',
     background: null,
   },
   {
@@ -264,7 +265,7 @@ export const quadrangle_dismiss_fail = [
     id: 'qdtf_02',
     speaker: 'Protagonist',
     text: 'Make them stop...',
-    portrait: 'port_mc_default', sprite: 'spr_mc_default',
+    portrait: 'port_mc_default', sprite: 'spr_mc_shocked',
     background: null,
   },
 ];
@@ -285,7 +286,7 @@ const quadrangle_climax_base = [
   { id: 'qcl_12', speaker: 'Regret', text: 'And look where it got her.', portrait: 'portrait_regret', sprite: 'sprite_regret', portraitOffsetY: 60, background: null },
   { id: 'qcl_13', speaker: null, text: 'The shadows lengthen. REGRET steps out from the darkness. Much taller. Imposing.', portrait: 'portrait_regret', sprite: 'sprite_regret', portraitOffsetY: 60, background: null },
   { id: 'qcl_14', speaker: 'Regret', text: 'You worked yourself to the bone, and yet... you still failed.', portrait: 'portrait_regret', sprite: 'sprite_regret', portraitOffsetY: 60, background: null },
-  { id: 'qcl_15', speaker: 'Protagonist', text: 'No... I tried my best.', portrait: 'port_mc_shocked', sprite: 'spr_mc_shocked', background: null },
+  { id: 'qcl_15', speaker: 'Protagonist', text: 'No... I tried my best.', portrait: 'port_mc_default', sprite: 'spr_mc_shocked', background: null },
   { id: 'qcl_16', speaker: 'Regret', text: 'Your best?', portrait: 'portrait_regret', sprite: 'sprite_regret', portraitOffsetY: 60, background: null },
   { id: 'qcl_17', speaker: null, text: 'The courtyard distorts. A flash of memory.', portrait: null, background: null },
   { id: 'qcl_18', speaker: 'Regret', text: 'Do you remember the test? The one you studied three nights for? You still couldn\'t answer the final question.', portrait: 'portrait_regret', sprite: 'sprite_regret', portraitOffsetY: 60, background: null },
@@ -303,7 +304,7 @@ const quadrangle_climax_base = [
   { id: 'qcl_30', speaker: 'Protagonist', text: '... Is this all there is? Just... being tired and hating myself for it?', portrait: 'port_mc_default', sprite: 'spr_mc_default', background: null },
   { id: 'qcl_31', speaker: null, text: 'Silence. Burnout and Regret do not advance. They stand perfectly still.', portrait: null, background: null },
   { id: 'qcl_32', speaker: 'Burnout', text: '... We are only the symptoms.', portrait: 'portrait_burnout', sprite: 'sprite_burnout', background: null },
-  { id: 'qcl_33', speaker: 'Protagonist', text: 'What?', portrait: 'port_mc_shocked', sprite: 'spr_mc_shocked', background: null },
+  { id: 'qcl_33', speaker: 'Protagonist', text: 'What?', portrait: 'port_mc_default', sprite: 'spr_mc_shocked', background: null },
   { id: 'qcl_34', speaker: 'Regret', text: 'You think we are the enemy. You think fighting us will save you.', portrait: 'portrait_regret', sprite: 'sprite_regret', portraitOffsetY: 60, background: null },
   { id: 'qcl_35', speaker: 'Regret', text: 'But we are only fragments of a larger crack.', portrait: 'portrait_regret', sprite: 'sprite_regret', portraitOffsetY: 60, background: null },
   { id: 'qcl_36', speaker: null, text: 'The courtyard lamps shatter simultaneously. Total darkness descends. The ground begins to groan, as if buckling under immense weight.', portrait: null, background: null },
@@ -313,7 +314,7 @@ const quadrangle_climax_base = [
   { id: 'qcl_40', speaker: 'Regret', text: 'When every mistake is piled up... when the exhaustion breaks your will to live...', portrait: 'portrait_regret', sprite: 'sprite_regret', portraitOffsetY: 60, background: null },
   { id: 'qcl_41', speaker: 'Regret', text: 'What is left?', portrait: 'portrait_regret', sprite: 'sprite_regret', portraitOffsetY: 60, background: null },
   { id: 'qcl_42', speaker: null, text: 'A massive silhouette begins to rise from the very shadows beneath them. Black sludge pools at the protagonist\'s feet, clinging to her shoes.', portrait: null, background: null },
-  { id: 'qcl_43', speaker: 'Protagonist', text: 'No... no, what is that?!', portrait: 'port_mc_shocked', sprite: 'spr_mc_shocked', background: null },
+  { id: 'qcl_43', speaker: 'Protagonist', text: 'No... no, what is that?!', portrait: 'port_mc_default', sprite: 'spr_mc_shocked', background: null },
   { id: 'qcl_44', speaker: null, text: 'Burnout and Regret begin to sink into the sludge. They do not resist. They simply allow the darkness to reclaim them.', portrait: null, background: null },
   { id: 'qcl_45', speaker: 'Burnout', text: 'The end result.', portrait: 'portrait_burnout', sprite: 'sprite_burnout', background: null },
   { id: 'qcl_46', speaker: null, text: 'The towering figure fully manifests. It has no face, only a hollow void that pulls at the light. Whispers emanate from it—not just Burnout\'s tired voice, not just Regret\'s sharp tone, but hundreds of overlapping voices crying out in hopelessness.', portrait: 'portrait_despair', sprite: 'sprite_despair', spriteScale: 1.1, spriteOffsetY: 0, portraitScale: 1.8, portraitOffsetY: 180, background: null },
@@ -346,7 +347,7 @@ export const quadrangle_climax_barely = [
 
 export const quadrangle_climax_failed = [
   ...quadrangle_dismiss_fail,
-  { id: 'qcl_f_01', speaker: 'Protagonist', text: "I can't... I can't do this anymore.", portrait: 'port_mc_default', sprite: 'spr_mc_default', background: null },
+  { id: 'qcl_f_01', speaker: 'Protagonist', text: "I can't... I can't do this anymore.", portrait: 'port_mc_default', sprite: 'spr_mc_shocked', background: null },
   ...quadrangle_climax_base
 ];
 
@@ -372,7 +373,7 @@ export const quadrangle_chase_resolution_good = [
 export const quadrangle_chase_resolution_bad = [
   { id: 'qchr_b_01', speaker: null, text: 'The exhaustion finally takes over. Her legs give out, and she collapses onto the cold ground.', portrait: null, background: 'bg_chase' },
   { id: 'qchr_b_02', speaker: null, text: 'In an instant, the encroaching darkness swallows her completely. Heavy, suffocating hands of shadow pull her down.', portrait: null, background: null },
-  { id: 'qchr_b_03', speaker: 'Protagonist', text: 'I can\'t... I have nothing left...', portrait: 'port_mc_default', sprite: 'spr_mc_default', background: null },
+  { id: 'qchr_b_03', speaker: 'Protagonist', text: 'I can\'t... I have nothing left...', portrait: 'port_mc_default', sprite: 'spr_mc_shocked', background: null },
   { id: 'qchr_b_04', speaker: null, text: 'The cacophony of whispers finally ceases, merging into a single, overwhelming silence.', portrait: null, background: null },
   { id: 'qchr_b_05', speaker: 'Despair', text: 'Then rest. Forever.', portrait: 'portrait_despair', sprite: 'sprite_despair', spriteScale: 1.1, spriteOffsetY: 0, portraitScale: 1.8, portraitOffsetY: 180, background: null },
   { id: 'qchr_b_06', speaker: null, text: 'She closes her eyes. Everything goes black.', portrait: null, background: null },

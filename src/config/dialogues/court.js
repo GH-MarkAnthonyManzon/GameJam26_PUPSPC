@@ -38,7 +38,7 @@ export const court_lost_1 = [
   {
     id: 'ct_l1_05',
     speaker: null,
-    text: 'Lost constantly questions the protagonist\'s purpose.',
+    text: 'Lost constantly questions her purpose.',
     portrait: 'portrait_lost', sprite: 'sprite_lost', spriteScale: 1.1, spriteOffsetY: 0, portraitScale: 1.8, portraitOffsetY: 180,
     background: null,
   },
@@ -46,14 +46,14 @@ export const court_lost_1 = [
 
 // ── Climax — Deprivation appears + Final Boss ────────────────────────────
 export const court_climax = [
-  { id: 'ct_cl_01', speaker: 'Protagonist', text: 'Stop it... both of you.', portrait: 'port_mc_default', sprite: 'spr_mc_default', background: 'bg_court' },
+  { id: 'ct_cl_01', speaker: 'Protagonist', text: 'Stop it... both of you.', portrait: 'port_mc_default', sprite: 'spr_mc_shocked', background: 'bg_court' },
   { id: 'ct_cl_02', speaker: null, text: 'DEPRIVATION appears. Unlike the others — very calm. Soft voice.', portrait: 'portrait_deprivation', sprite: 'sprite_deprivation', background: null },
   { id: 'ct_cl_03', speaker: 'Deprivation', text: 'You used to draw.', portrait: 'portrait_deprivation', sprite: 'sprite_deprivation', background: null },
   { id: 'ct_cl_04', speaker: 'Protagonist', text: '...I was busy.', portrait: 'port_mc_default', sprite: 'spr_mc_default', background: null },
   { id: 'ct_cl_05', speaker: 'Deprivation', text: 'Busy.', portrait: 'portrait_deprivation', sprite: 'sprite_deprivation', background: null },
   { id: 'ct_cl_06', speaker: null, text: 'Silence. The empty court echoes the unspoken words.', portrait: null, background: null },
   { id: 'ct_cl_07', speaker: 'Deprivation', text: 'Years. When was the last time... you did something because it made you happy?', portrait: 'portrait_deprivation', sprite: 'sprite_deprivation', background: null },
-  { id: 'ct_cl_08', speaker: null, text: 'The protagonist opens her mouth, but no words come out.', portrait: null, background: null },
+  { id: 'ct_cl_08', speaker: null, text: 'She opens her mouth, but no words come out.', portrait: null, background: null },
   { id: 'ct_cl_09', speaker: null, text: 'LOST steps out from the bleachers. Its movements are slow, drifting aimlessly.', sfx: 'sfx_heavy', portrait: 'portrait_lost', sprite: 'sprite_lost', spriteScale: 1.1, spriteOffsetY: 0, portraitScale: 1.8, portraitOffsetY: 180, background: null },
   { id: 'ct_cl_10', speaker: 'Lost', text: "She doesn't know who she is.", portrait: 'portrait_lost', sprite: 'sprite_lost', spriteScale: 1.1, spriteOffsetY: 0, portraitScale: 1.8, portraitOffsetY: 180, background: null },
   { id: 'ct_cl_11', speaker: 'Deprivation', text: 'Because she starved herself of joy.', portrait: 'portrait_deprivation', sprite: 'sprite_deprivation', background: null },
@@ -90,8 +90,10 @@ export const court_climax = [
 ];
 
 export const court_cards_balanced = [
-  { id: 'ct_cb_01',
-    bgm: 'bgm_twisted_minigame', speaker: null, text: 'The last card fades. Something shifts in the air.', portrait: null, background: 'bg_court' },
+  {
+    id: 'ct_cb_01',
+    bgm: 'bgm_twisted_minigame', speaker: null, text: 'The last card fades. Something shifts in the air.', portrait: null, background: 'bg_court'
+  },
   { id: 'ct_cb_02', speaker: 'Lost', text: 'You tried to hold everything. You ran in every direction...', portrait: 'portrait_lost', sprite: 'sprite_lost', spriteScale: 1.1, spriteOffsetY: 0, portraitScale: 1.8, portraitOffsetY: 180, background: null },
   { id: 'ct_cb_03', speaker: 'Deprivation', text: '...but your hands are still empty.', portrait: 'portrait_deprivation', sprite: 'sprite_deprivation', background: null },
   { id: 'ct_cb_04', speaker: 'Protagonist', text: 'I... I tried to keep up. I didn\'t want to fall behind.', portrait: 'port_mc_default', sprite: 'spr_mc_default', background: null },
@@ -101,8 +103,10 @@ export const court_cards_balanced = [
 ];
 
 export const court_cards_burnout = [
-  { id: 'ct_cbu_01',
-    bgm: 'bgm_twisted_minigame', speaker: null, text: 'The last invitation disappears. She has nothing left.', portrait: null, background: 'bg_court' },
+  {
+    id: 'ct_cbu_01',
+    bgm: 'bgm_twisted_minigame', speaker: null, text: 'The last invitation disappears. She has nothing left.', portrait: null, background: 'bg_court'
+  },
   { id: 'ct_cbu_02', speaker: 'Lost', text: 'You gave them everything. Every hour. Every piece of yourself.', portrait: 'portrait_lost', sprite: 'sprite_lost', spriteScale: 1.1, spriteOffsetY: 0, portraitScale: 1.8, portraitOffsetY: 180, background: null },
   { id: 'ct_cbu_03', speaker: 'Protagonist', text: 'I thought... if I just said yes, I\'d find where I belong.', portrait: 'port_mc_default', sprite: 'spr_mc_default', background: null },
   { id: 'ct_cbu_04', speaker: 'Deprivation', text: 'But you gave until there was nothing left for you.', portrait: 'portrait_deprivation', sprite: 'sprite_deprivation', background: null },
@@ -112,8 +116,10 @@ export const court_cards_burnout = [
 ];
 
 export const court_cards_isolated = [
-  { id: 'ct_ci_01',
-    bgm: 'bgm_twisted_minigame', speaker: null, text: 'The last invitation is left untouched. The court is silent.', portrait: null, background: 'bg_court' },
+  {
+    id: 'ct_ci_01',
+    bgm: 'bgm_twisted_minigame', speaker: null, text: 'The last invitation is left untouched. The court is silent.', portrait: null, background: 'bg_court'
+  },
   { id: 'ct_ci_02', speaker: 'Lost', text: 'You pushed them all away. You refused to walk with them.', portrait: 'portrait_lost', sprite: 'sprite_lost', spriteScale: 1.1, spriteOffsetY: 0, portraitScale: 1.8, portraitOffsetY: 180, background: null },
   { id: 'ct_ci_03', speaker: 'Protagonist', text: 'I was protecting myself! It was too much.', portrait: 'port_mc_default', sprite: 'spr_mc_default', background: null },
   { id: 'ct_ci_04', speaker: 'Deprivation', text: 'You built walls so high that no one could reach you.', portrait: 'portrait_deprivation', sprite: 'sprite_deprivation', background: null },
@@ -135,16 +141,16 @@ export const court_chase_checkpoint_3 = [
 ];
 
 export const court_chase_resolution_good = [
-  { id: 'ct_chr_g_01', speaker: null, text: 'The protagonist stumbles toward the blinding light ahead. Her body aches, and the shadows claw at her heels.', portrait: null, background: 'bg_chase' },
+  { id: 'ct_chr_g_01', speaker: null, text: 'She stumbles toward the blinding light ahead. Her body aches, and the shadows claw at her heels.', portrait: null, background: 'bg_chase' },
   { id: 'ct_chr_g_02', speaker: 'Protagonist', text: "I don't know where I'm going... but anywhere is better than here.", portrait: 'port_mc_default', sprite: 'spr_mc_default', background: null },
   { id: 'ct_chr_g_03', speaker: null, text: 'With one final push, she forces herself forward.', portrait: null, background: null },
   { id: 'ct_chr_g_04', speaker: null, text: 'She steps into the light, leaving the shadows behind. Everything fades to white.', portrait: null, background: null },
 ];
 
 export const court_chase_resolution_bad = [
-  { id: 'ct_chr_b_01', speaker: null, text: 'The protagonist\'s legs give out. She collapses onto the polished floor of the court.', portrait: null, background: 'bg_chase' },
+  { id: 'ct_chr_b_01', speaker: null, text: 'Her legs give out. She collapses onto the polished floor of the court.', portrait: null, background: 'bg_chase' },
   { id: 'ct_chr_b_02', speaker: null, text: 'In an instant, the encroaching darkness swallows her completely. Heavy, suffocating hands of shadow pull her down.', portrait: null, background: null },
-  { id: 'ct_chr_b_03', speaker: 'Protagonist', text: "I'm so lost... I'm so empty...", portrait: 'port_mc_default', sprite: 'spr_mc_default', background: null },
+  { id: 'ct_chr_b_03', speaker: 'Protagonist', text: "I'm so lost... I'm so empty...", portrait: 'port_mc_default', sprite: 'spr_mc_shocked', background: null },
   { id: 'ct_chr_b_04', speaker: null, text: 'The cacophony of whispers finally ceases, merging into a single, overwhelming silence.', portrait: null, background: null },
   { id: 'ct_chr_b_05', speaker: 'Despair', text: 'Then be nothing.', portrait: 'portrait_despair', sprite: 'sprite_despair', spriteScale: 1.1, spriteOffsetY: 0, portraitScale: 1.8, portraitOffsetY: 180, background: null },
   { id: 'ct_chr_b_06', speaker: null, text: 'She closes her eyes. Everything goes black.', portrait: null, background: null },

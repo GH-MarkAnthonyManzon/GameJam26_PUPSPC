@@ -136,6 +136,11 @@ export class DialogueScene extends Phaser.Scene {
       this.updateSelection();
     });
 
+    this.fadeOverlay = this.add.rectangle(0, 0, this.scale.width, this.scale.height, 0x000000)
+      .setOrigin(0)
+      .setDepth(9999)
+      .setAlpha(0);
+
     this.cameras.main.fadeIn(400, 0, 0, 0);
     this.showStep(0);
   }
@@ -149,6 +154,47 @@ export class DialogueScene extends Phaser.Scene {
     const { width: W, height: H } = this.scale;
     
     const step = this.steps[index];
+
+    // Custom Cinematic Transitions
+    if (step.id === 'p_1_12') {
+      this.canAdvance = false;
+      this.tweens.add({
+        targets: this.fadeOverlay,
+        alpha: 1,
+        duration: 400,
+        onComplete: () => {
+          this.time.delayedCall(200, () => {
+            this.canAdvance = true;
+            this.advance();
+          });
+        }
+      });
+      return; // Wait for transition to complete
+    }
+
+    if (step.id === 'p_2_01') {
+      this.tweens.add({
+        targets: this.fadeOverlay,
+        alpha: 0,
+        duration: 400
+      });
+    }
+
+    if (step.id === 'qb1_01') {
+      this.tweens.add({
+        targets: this.fadeOverlay,
+        alpha: 0.45,
+        duration: 250
+      });
+    }
+
+    if (step.id === 'qb1_10') {
+      this.tweens.add({
+        targets: this.fadeOverlay,
+        alpha: 0,
+        duration: 400
+      });
+    }
 
     // -- Audio Processing --
     if (step.bgm) {
