@@ -14,6 +14,40 @@ export class BootScene extends Phaser.Scene {
   }
 
   preload() {
+    // ── Loading Bar ─────────────────────────────────────────────────────────
+    const { width, height } = this.scale;
+    const progressBar = this.add.graphics();
+    const progressBox = this.add.graphics();
+    
+    progressBox.fillStyle(0x222222, 0.8);
+    progressBox.fillRect(width / 2 - 160, height / 2 - 25, 320, 50);
+
+    const loadingText = this.add.text(width / 2, height / 2 - 50, 'Loading...', {
+      fontFamily: '"Courier New", monospace',
+      fontSize: '20px',
+      fill: '#ffffff'
+    }).setOrigin(0.5);
+
+    const percentText = this.add.text(width / 2, height / 2, '0%', {
+      fontFamily: '"Courier New", monospace',
+      fontSize: '18px',
+      fill: '#ffffff'
+    }).setOrigin(0.5);
+
+    this.load.on('progress', (value) => {
+      percentText.setText(parseInt(value * 100) + '%');
+      progressBar.clear();
+      progressBar.fillStyle(0xffffff, 1);
+      progressBar.fillRect(width / 2 - 150, height / 2 - 15, 300 * value, 30);
+    });
+
+    this.load.on('complete', () => {
+      progressBar.destroy();
+      progressBox.destroy();
+      loadingText.destroy();
+      percentText.destroy();
+    });
+
     // ── Backgrounds ─────────────────────────────────────────────────────────
     this.load.image('bg_comlab', 'assets/backgrounds/comlab.png');
     this.load.image('bg_outside', 'assets/backgrounds/outside.png');

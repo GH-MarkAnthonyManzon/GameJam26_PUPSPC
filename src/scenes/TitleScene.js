@@ -41,11 +41,12 @@ export class TitleScene extends Phaser.Scene {
       });
     }
 
-    // Background
-    this.add.image(W / 2, H / 2, 'bg_lab').setDisplaySize(W, H);
+    // Background (using bg_comlab as requested)
+    const bg = this.add.image(W / 2, H / 2, 'bg_comlab').setDisplaySize(W, H);
+    bg.setTint(0x4466aa); // Slightly blue tint
 
-    // Dark vignette overlay
-    this.add.rectangle(W / 2, H / 2, W, H, 0x000000, 0.55);
+    // Dark vignette overlay to make text stand out more
+    this.add.rectangle(W / 2, H / 2, W, H, 0x000000, 0.7);
 
     // ── Title text ──────────────────────────────────────────────────────
     this.add.text(W / 2, H / 2 - 80, 'NINTENDOGS', {
