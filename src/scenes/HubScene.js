@@ -34,10 +34,10 @@ const ROUTES = [
 ];
 
 const FONTS = {
-  speaker_mc: { fontFamily: 'Georgia, serif', fontSize: '18px', color: '#f1c40f', fontStyle: 'bold' },
-  dialogue: { fontFamily: 'Georgia, serif', fontSize: '18px', color: '#ffffff', wordWrap: { width: 560 }, lineSpacing: 6 },
-  choice: { fontFamily: 'Georgia, serif', fontSize: '16px', color: '#aaaaaa' },
-  choice_selected: { fontFamily: 'Georgia, serif', fontSize: '16px', color: '#f1c40f', fontStyle: 'bold' },
+  speaker_mc: { fontFamily: 'Georgia, serif', fontSize: '24px', color: '#f1c40f', fontStyle: 'bold' },
+  dialogue: { fontFamily: 'Georgia, serif', fontSize: '24px', color: '#ffffff', wordWrap: { width: 700 }, lineSpacing: 6 },
+  choice: { fontFamily: 'Georgia, serif', fontSize: '22px', color: '#aaaaaa' },
+  choice_selected: { fontFamily: 'Georgia, serif', fontSize: '22px', color: '#f1c40f', fontStyle: 'bold' },
 };
 
 export class HubScene extends Phaser.Scene {
@@ -61,18 +61,19 @@ export class HubScene extends Phaser.Scene {
     this.add.rectangle(W / 2, H / 2, W, H, 0x000000, 0.4);
 
     // ── Dialogue UI (matching DialogueScene) ──────────────────────────────
-    const BOX_H = 140;
+    const BOX_H = 180;
     const BOX_Y = H - BOX_H / 2 - 15;
     this.add.rectangle(W / 2, BOX_Y, W - 40, BOX_H, 0x111111, 0.75)
       .setStrokeStyle(2, 0xffffff);
 
-    this.speakerTxt = this.add.text(45, BOX_Y - BOX_H / 2 - 12, 'MC', FONTS.speaker_mc)
-      .setOrigin(0, 0.5)
+    this.speakerTxt = this.add.text(45, BOX_Y - BOX_H / 2 - 12, 'Protagonist', FONTS.speaker_mc)
+      .setOrigin(0, 1)
       .setStroke('#000000', 4);
 
-    this.dialogueTxt = this.add.text(30, H - BOX_H - 5, '', FONTS.dialogue);
+    this.dialogueTxt = this.add.text(40, H - BOX_H - 2, '', FONTS.dialogue);
 
     this.choicesActive = false;
+    this.isLocked = false;
     this.selectedIndex = 0;
     this.choiceTexts = [];
     this.fullText = "Where should I go?";
@@ -93,6 +94,7 @@ export class HubScene extends Phaser.Scene {
 
     // Skip typing on click
     this.input.on('pointerdown', () => {
+      if (this.isLocked) return;
       if (!this.choicesActive) {
         this.typewriterTimer.remove();
         this.dialogueTxt.setText(this.fullText);
@@ -108,13 +110,40 @@ export class HubScene extends Phaser.Scene {
     if (this.choicesActive) return;
     this.choicesActive = true;
 
-    const { height: H } = this.scale;
-    const startY = H - 105;
-    const spacing = 30;
+    const { width: W, height: H } = this.scale;
+    const startY = H - 140;
+    const spacing = 45;
+
+    // Approximate center locations of the 3 map pins in bg_MAP
+    const pinX = [W * 0.28, W * 0.5, W * 0.72];
+    const pinY = H * 0.42;
 
     ROUTES.forEach((route, idx) => {
-      const txt = this.add.text(60, startY + (idx * spacing), route.label, FONTS.choice)
-        .setInteractive({ useHandCursor: true })
+      const yPos = startY + (idx * spacing);
+
+      // Create a massive invisible zone over the map pin graphic itself
+      const mapZone = this.add.rectangle(pinX[idx], pinY, 180, 240, 0x000000, 0)
+        .setInteractive({ useHandCursor: true });
+
+      mapZone.on('pointerover', () => {
+        this.selectedIndex = idx;
+        this.updateSelection();
+      });
+
+      mapZone.on('pointerdown', () => {
+        this.selectedIndex = idx;
+        this.confirmSelection();
+      });
+
+      // Generous local hit area (300x45) for mobile thumbs, without breaking desktop UX
+      const hitArea = new Phaser.Geom.Rectangle(-20, -10, 300, 45);
+
+      const txt = this.add.text(60, yPos, route.label, FONTS.choice)
+        .setInteractive({
+          hitArea: hitArea,
+          hitAreaCallback: Phaser.Geom.Rectangle.Contains,
+          useHandCursor: true
+        })
         .setAlpha(0);
 
       this.tweens.add({ targets: txt, alpha: 1, duration: 300, delay: idx * 100 });
@@ -170,9 +199,10 @@ export class HubScene extends Phaser.Scene {
   }
 
   confirmSelection() {
-    if (!this.choicesActive) return;
-    this.choicesActive = false; // lock
-    
+    if (!this.choicesActive || this.isLocked) return;
+    this.choicesActive = false;
+    this.isLocked = true; // lock completely
+
     // Disable inputs
     this.input.keyboard.off('keydown-UP');
     this.input.keyboard.off('keydown-DOWN');

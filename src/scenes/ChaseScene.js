@@ -57,10 +57,10 @@ export class ChaseScene extends Phaser.Scene {
     // Start global BGM
     if (this.registry.get('currentBgmKey') !== 'bgm_chase') {
       const old = this.registry.get('currentBgmAudio');
-      
+
       const newBgm = this.sound.add('bgm_chase', { loop: true, volume: 0 });
       newBgm.play();
-      
+
       this.registry.set('currentBgmKey', 'bgm_chase');
       this.registry.set('currentBgmAudio', newBgm);
 
@@ -134,6 +134,32 @@ export class ChaseScene extends Phaser.Scene {
     });
 
     this.scheduleWhispers();
+
+    // ── Instruction UI ────────────────────────────────────────────────────
+    this.instructionTxt = this.add.text(W / 2, H - 40, 'HOLD [W] OR TOUCH SCREEN TO RUN', {
+      fontFamily: '"Courier New", monospace',
+      fontSize: '20px',
+      color: '#ffffff',
+      letterSpacing: 2
+    }).setOrigin(0.5).setDepth(10);
+
+    this.tweens.add({
+      targets: this.instructionTxt,
+      alpha: 0.3,
+      duration: 800,
+      yoyo: true,
+      repeat: -1
+    });
+
+    // ── Mobile Touch Lane Swapping ────────────────────────────────────────
+    this.input.on('pointerdown', (pointer) => {
+      if (!this.chaseActive || this.inCheckpoint) return;
+      if (pointer.x < W * 0.25) {
+        if (this.currentLane > -1) this.currentLane--;
+      } else if (pointer.x > W * 0.75) {
+        if (this.currentLane < 1) this.currentLane++;
+      }
+    });
 
     this.cameras.main.fadeIn(400, 0, 0, 0);
   }
@@ -606,8 +632,12 @@ export class ChaseScene extends Phaser.Scene {
     // ── Spiral rotation — constant speed, does NOT change with movement ───
     this.spiralAngle += SPIRAL_BASE_ROTATION * dt;
 
-    // ── Forward movement (W) ──────────────────────────────────────────────
-    if (this.keys.up.isDown) {
+    // ── Forward movement (W or Touch) ──────────────────────────────────────────────
+    const pointer = this.input.activePointer;
+    const { width: W, height: H } = this.scale;
+    const isTouchForward = pointer.isDown && pointer.x >= W * 0.25 && pointer.x <= W * 0.75;
+
+    if (this.keys.up.isDown || isTouchForward) {
       this.progress += this.speed * dt;
 
       this.checkProgress();
@@ -625,7 +655,6 @@ export class ChaseScene extends Phaser.Scene {
     this.cameraXOffset = Phaser.Math.Linear(this.cameraXOffset, targetXOffset, 0.1);
 
     // ── Redraw procedural tunnel ──────────────────────────────────────────
-    const { width: W, height: H } = this.scale;
     this.drawTunnel(W, H, dt);
 
     this.vignetteGfx.alpha =
@@ -746,7 +775,7 @@ export class ChaseScene extends Phaser.Scene {
     this.cameras.main.once('camerafadeoutcomplete', () => {
       const endingKey = GameState.getEnding();
       const resolutionKey = `${GameState.chosenRoute}_chase_resolution_${endingKey}`;
-      
+
       // If the route has a specific resolution dialogue, play it first
       if (DIALOGUES[resolutionKey]) {
         this.scene.start('DialogueScene', {
