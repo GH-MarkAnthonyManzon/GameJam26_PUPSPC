@@ -582,6 +582,7 @@ export class MiniGameScene extends Phaser.Scene {
           this.changeCertainty(this.config.avoidancePenalty);
           this.doorLabel.setText("[ SHATTERED ]\n\nThe memory suddenly cracks like broken glass.\n\nShe desperately tries to look away. To make it end sooner.\n\nThe memory shatters. Leaving only fragments behind.\n\nRegret: See? Even now... You refuse to face it.");
           this.doorLabel.setColor('#e74c3c');
+          this.fitDoorText();
         }
       }
     });
@@ -724,6 +725,7 @@ export class MiniGameScene extends Phaser.Scene {
     this.doorProgressTxt.setText(`Door ${index + 1} of ${cfg.totalDoors}`);
     this.doorBg.setStrokeStyle(2, effect.color);
     this.doorLabel.setText(`[ ${effect.label.toUpperCase()} ]\n\n${door.memory}`).setColor('#888888');
+    this.fitDoorText();
 
     // Timer bar countdown — visual only, updated every 50ms
     // Auto-advance is handled by a single delayedCall (avoids floating-point
@@ -771,6 +773,7 @@ export class MiniGameScene extends Phaser.Scene {
     this.inReflection     = true;
     this.reflectionClicks = 0;
     this.doorLabel.setText(`[ REMEMBERING ]\n\n${door.memory}`).setColor('#ffffff');
+    this.fitDoorText();
 
     this.time.delayedCall(this.config.reflectionDuration, () => {
       this.inReflection = false;
@@ -822,6 +825,14 @@ export class MiniGameScene extends Phaser.Scene {
 
     GameState.recordRating(cfg.id, rating, points);
     this.endMiniGame(rating);
+  }
+
+  fitDoorText() {
+    if (!this.doorLabel) return;
+    this.doorLabel.setScale(1);
+    if (this.doorLabel.height > 260) {
+      this.doorLabel.setScale(260 / this.doorLabel.height);
+    }
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
