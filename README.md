@@ -1,4 +1,4 @@
-# NINTENDOGS — A Horror Visual Novel
+# A Horror Visual Novel by NINTENDOGS
 
 A horror visual novel clicker about college trauma, dreams, and survival. Built for Game Jam 2026.
 
